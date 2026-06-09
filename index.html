@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Abhinav · Net Worth</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#f0eff5;--surf:#fff;--surf2:#f5f4fa;--surf3:#eceaf4;
+  --txt:#16151e;--txt2:#5a5870;--txt3:#9d9bb5;--txt4:#c8c6db;
+  --brd:rgba(22,21,30,.09);--brd2:rgba(22,21,30,.15);
+  --grn:#16a34a;--red:#dc2626;--blu:#2563eb;--amb:#d97706;
+  --tel:#0891b2;--pur:#7c3aed;--pnk:#db2777;--org:#ea580c;
+  --gdim:rgba(22,163,74,.1);--rdim:rgba(220,38,38,.09);--bdim:rgba(37,99,235,.1);
+  --adim:rgba(217,119,6,.09);--tdim:rgba(8,145,178,.09);--pdim:rgba(124,58,237,.1);
+  --sh:0 1px 8px rgba(0,0,0,.07);--sh2:0 4px 20px rgba(0,0,0,.1);
+  --r:16px;--rp:100px;--nav:68px;
+  font-family:Helvetica,Arial,sans-serif;
+  --glass-light:rgba(255,255,255,0.65);
+  --glass-dark:rgba(16,15,24,0.82);
+  --glass-brd-light:rgba(255,255,255,0.5);
+  --glass-brd-dark:rgba(255,255,255,0.09);
+}
+.dark{
+  --bg:#080a1a;--surf:#0a0c1e;--surf2:#0e1228;--surf3:#131730;
+  --txt:#f0eef8;--txt2:#a09eb8;--txt3:#58566c;--txt4:#38364a;
+  --brd:rgba(240,238,248,.07);--brd2:rgba(240,238,248,.12);
+  --grn:#22c55e;--red:#f87171;--blu:#60a5fa;--amb:#fbbf24;
+  --tel:#22d3ee;--pur:#a78bfa;--pnk:#f472b6;--org:#fb923c;
+  --gdim:rgba(34,197,94,.13);--rdim:rgba(248,113,113,.13);--bdim:rgba(96,165,250,.13);
+  --adim:rgba(251,191,36,.11);--tdim:rgba(34,211,238,.11);--pdim:rgba(167,139,250,.13);
+  --sh:0 2px 16px rgba(0,0,0,.45);--sh2:0 6px 30px rgba(0,0,0,.6);
+}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--txt);font-size:14px;line-height:1.5}
+input,select,button,textarea{font-family:Helvetica,Arial,sans-serif}
+::-webkit-scrollbar{width:3px;height:3px}
+::-webkit-scrollbar-thumb{background:var(--brd2);border-radius:3px}
+#app{height:100vh;display:flex;flex-direction:column;max-width:480px;margin:0 auto;position:relative}
+#pages{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding-bottom:calc(var(--nav) + 28px)}
+.page{display:none;padding:0 0 16px;min-height:calc(100vh - var(--nav))}
+.page.active{display:block;animation:fu .25s ease}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── FLOATING GLASS NAV ── */
+#bnav{
+  position:fixed;
+  bottom:calc(env(safe-area-inset-bottom,0px) + 14px);
+  left:50%;transform:translateX(-50%);
+  width:calc(100% - 28px);max-width:452px;
+  height:62px;
+  display:flex;align-items:center;
+  border-radius:26px;
+  z-index:200;padding:0 6px;
+  background:linear-gradient(135deg,rgba(26,22,50,.85) 0%,rgba(18,16,40,.9) 50%,rgba(14,20,44,.85) 100%);
+  border:1px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);
+  box-shadow:0 8px 32px rgba(0,0,0,.45),0 2px 8px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.08),inset 0 -1px 0 rgba(0,0,0,.2);
+}
+#bnav::before{
+  content:'';position:absolute;inset:0;border-radius:26px;
+  background:linear-gradient(135deg,rgba(124,58,237,.13) 0%,transparent 45%,rgba(0,212,160,.07) 100%);
+  pointer-events:none;
+}
+body:not(.dark) #bnav{
+  background:linear-gradient(135deg,rgba(255,255,255,.75) 0%,rgba(248,246,255,.85) 50%,rgba(242,246,255,.75) 100%);
+  border:1px solid rgba(124,58,237,.16);
+  box-shadow:0 8px 32px rgba(124,58,237,.12),0 2px 12px rgba(0,0,0,.07),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(124,58,237,.05);
+}
+body:not(.dark) #bnav::before{
+  background:linear-gradient(135deg,rgba(124,58,237,.07) 0%,transparent 50%,rgba(34,197,94,.04) 100%);
+}
+.bni{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  cursor:pointer;border:none;background:transparent;
+  color:rgba(255,255,255,.38);
+  font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:700;
+  height:50px;border-radius:20px;padding:0;
+  transition:color .2s,background .2s,transform .15s;
+  user-select:none;position:relative;z-index:1;
+  text-transform:uppercase;letter-spacing:.3px;
+}
+body:not(.dark) .bni{color:rgba(90,88,112,.65)}
+.bni:active{transform:scale(.92)}
+.bni svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.bni.active{color:var(--pur);background:rgba(124,58,237,.18)}
+body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.1)}
+.bni.active svg{stroke:var(--pur);transform:translateY(-1px)}
+
+/* HEADER */
+.ph{padding:16px 16px 8px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ph-title{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.icon-btn{width:36px;height:36px;border-radius:10px;background:var(--surf2);border:1px solid var(--brd);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.icon-btn:active{background:var(--surf3)}
+.icon-btn svg{width:16px;height:16px;stroke:var(--txt2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hrow{display:flex;gap:6px;align-items:center;flex-shrink:0}
+
+/* FX PILL */
+.fx-pill{
+  display:flex;align-items:center;gap:5px;
+  background:var(--surf2);border:1px solid var(--brd);
+  border-radius:var(--rp);padding:5px 9px;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.dark .fx-pill{
+  background:rgba(30,29,40,0.7);
+  border-color:rgba(255,255,255,0.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.fx-l{font-size:9px;color:var(--txt3);text-transform:uppercase;letter-spacing:.7px;font-weight:700}
+.fx-inp{background:transparent;border:none;outline:none;color:var(--txt);font-size:12px;font-weight:800;width:46px;font-family:Helvetica,Arial,sans-serif}
+.fx-b{font-size:10px;background:var(--gdim);color:var(--grn);border-radius:var(--rp);padding:2px 6px;font-weight:700}
+
+/* ══════════════════════════════════════════
+   DARK GLASSY GRADIENT SYSTEM
+   All hero cards, stat cards, and content cards
+   get unique dark gradient identities.
+   ══════════════════════════════════════════ */
+
+/* ── SHARED GLASS BASE ── */
+.hero,.fire-hero,.card,.stat-card{
+  position:relative;overflow:hidden;
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+.hero::after,.fire-hero::after,.card::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(180deg,rgba(255,255,255,.12) 0%,transparent 45%);
+  pointer-events:none;z-index:0;
+}
+.hero::before,.fire-hero::before{
+  content:'';position:absolute;width:200px;height:200px;border-radius:50%;
+  top:-60px;right:-50px;pointer-events:none;z-index:0;
+}
+.hero>*,.fire-hero>*,.stat-card>*{position:relative;z-index:1}
+.stat-card::before{
+  content:'';position:absolute;width:80px;height:80px;border-radius:50%;
+  top:-24px;right:-18px;pointer-events:none;z-index:0;opacity:.45;
+}
+
+/* ══════════════════════════════════
+   DARK MODE — deep saturated glass
+   ══════════════════════════════════ */
+
+/* Hero: Home — unified deep navy glass */
+.dark .hero.h-total{
+  background:linear-gradient(145deg,rgba(8,10,26,.9) 0%,rgba(10,14,34,.85) 50%,rgba(7,12,30,.9) 100%);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 8px 32px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.dark .hero.h-total::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+
+/* Hero: FIRE — unified deep navy glass */
+.dark .fire-hero{
+  background:linear-gradient(145deg,rgba(8,10,26,.9) 0%,rgba(10,14,34,.85) 50%,rgba(7,12,30,.9) 100%);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 8px 32px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.dark .fire-hero::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+
+/* Stat cards — unified deep navy glass */
+.dark .sc-pur{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-pur::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-blu{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-blu::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-grn{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-grn::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-amb{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-amb::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-red{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-red::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-tel{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-tel::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-grn2{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-grn2::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-pnk{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-pnk::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-ind{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-ind::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+.dark .sc-org{background:linear-gradient(145deg,rgba(9,11,27,.88),rgba(11,15,35,.82));border-color:rgba(255,255,255,.07)}
+.dark .sc-org::before{background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%)}
+
+/* Content cards — unified deep navy glass */
+.dark .card{background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border:1px solid rgba(255,255,255,.07);box-shadow:0 4px 20px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.05)}
+.dark #p-home .card:nth-child(1){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-home .card:nth-child(2){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #card-us-breakdown{background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #card-in-breakdown{background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-assets .card:not(#card-us-breakdown):not(#card-in-breakdown){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-fire .card:nth-child(1){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-fire .card:nth-child(2){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-passive .card:nth-child(1){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-passive .card:nth-child(2){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-passive .card:nth-child(3),.dark #sp-passive .card:nth-child(4),.dark #sp-passive .card:nth-child(5){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-dividends .card:nth-child(1){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-dividends .card:nth-child(2){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-dividends .card:nth-child(3){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-dividends .card:nth-child(4){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #sp-dividends .card:nth-child(5){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-more .card:nth-child(1),.dark #p-more .card:nth-child(2){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-more .card:nth-child(3){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+.dark #p-more .card:nth-child(4){background:linear-gradient(145deg,rgba(8,10,26,.88),rgba(10,14,34,.82));border-color:rgba(255,255,255,.07)}
+
+/* Dark mode text */
+.dark .card-ttl{color:rgba(255,255,255,.9)}
+.dark .sc-lbl{color:rgba(255,255,255,.5)}
+.dark .sc-val{color:#fff}
+.dark .sc-sub{color:rgba(255,255,255,.38)}
+.dark .sc-val.grn{color:#4ade80}.dark .sc-val.blu{color:#93c5fd}.dark .sc-val.amb{color:#fcd34d}
+.dark .sc-val.pur{color:#c4b5fd}.dark .sc-val.tel{color:#67e8f9}.dark .sc-val.red{color:#fca5a5}
+/* Dark card interiors */
+.dark .card .py-tbl th,.dark .card .htbl th,.dark .card .div-hist-tbl th{color:rgba(255,255,255,.45)!important;background:rgba(255,255,255,.05)!important}
+.dark .card .py-tbl td,.dark .card .htbl td,.dark .card .div-hist-tbl td{color:rgba(255,255,255,.7)!important;border-bottom-color:rgba(255,255,255,.07)!important}
+.dark .card .py-tbl td:first-child,.dark .card .htbl td:first-child,.dark .card .div-hist-tbl td:first-child{color:rgba(255,255,255,.9)!important}
+.dark .card .py-tbl .pos,.dark .card .htbl .pos,.dark .card .div-hist-tbl .pos{color:#4ade80!important}
+.dark .card .htbl .neg{color:#fca5a5!important}
+.dark .card .py-tbl .tr-row td,.dark .card .htbl .tr-row td{background:rgba(255,255,255,.08)!important;color:#fff!important}
+.dark .card .div-hist-tbl .tr-row td{color:#c4b5fd!important;background:rgba(255,255,255,.06)!important}
+.dark .card .al-lbl{color:rgba(255,255,255,.85)!important}
+.dark .card .al-val{color:rgba(255,255,255,.5)!important}
+.dark .card .seg{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.12)!important}
+.dark .card .seg-b{color:rgba(255,255,255,.45)!important}
+.dark .card .seg-b.active{background:rgba(255,255,255,.15)!important;color:#fff!important;border-color:rgba(255,255,255,.22)!important}
+.dark .card .dmc{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.1)!important}
+.dark .card .dmc-label{color:rgba(255,255,255,.45)!important}
+.dark .card .dmc-inp{color:#67e8f9!important}
+.dark .card .cell-inp{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.12)!important;color:rgba(255,255,255,.9)!important}
+.dark .card [style*="border-top:1px solid var(--brd)"]{border-top-color:rgba(255,255,255,.1)!important}
+
+/* ══════════════════════════════════
+   LIGHT MODE — soft pastel glass
+   Each colour gets a white+tint wash
+   ══════════════════════════════════ */
+
+/* Hero: Home — frosted white glass */
+body:not(.dark) .hero.h-total{
+  background:linear-gradient(145deg,rgba(255,255,255,.82) 0%,rgba(255,255,255,.72) 50%,rgba(248,248,255,.78) 100%);
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 8px 32px rgba(0,0,0,.08),0 2px 12px rgba(0,0,0,.05),inset 0 1px 0 rgba(255,255,255,.95);
+}
+body:not(.dark) .hero.h-total::before{background:radial-gradient(circle,rgba(255,255,255,.5),transparent 70%)}
+/* Hero text always white (heroes always have enough colour) */
+.hero .h-lbl,.hero .h-val,.hero .h-sub,.fire-hero .fh-lbl,.fire-hero .fh-val,.fire-hero .fh-sub{color:inherit}
+.hero.h-total .h-lbl,.fire-hero .fh-lbl{color:rgba(255,255,255,.6)}
+.hero.h-total .h-val,.fire-hero .fh-val{color:#fff}
+.hero.h-total .h-sub,.fire-hero .fh-sub{color:rgba(255,255,255,.5)}
+body:not(.dark) .hero.h-total .h-lbl{color:var(--txt2)}
+body:not(.dark) .hero.h-total .h-val{color:var(--txt)}
+body:not(.dark) .hero.h-total .h-sub{color:var(--txt2)}
+body:not(.dark) .hero.h-total .hbadge{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.1);color:var(--txt2)}
+body:not(.dark) .hero.h-total .hbadge.g{color:#15803d;background:rgba(22,163,74,.1);border-color:rgba(22,163,74,.2)}
+body:not(.dark) .hero.h-total .hbadge.a{color:#92400e;background:rgba(217,119,6,.1);border-color:rgba(217,119,6,.2)}
+body:not(.dark) .hero.h-total .fire-trk{background:rgba(0,0,0,.1)}
+body:not(.dark) .hero.h-total .fire-row{color:var(--txt3)}
+
+/* Hero: FIRE — frosted white glass */
+body:not(.dark) .fire-hero{
+  background:linear-gradient(145deg,rgba(255,255,255,.82) 0%,rgba(255,255,255,.72) 50%,rgba(248,248,255,.78) 100%);
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 8px 32px rgba(0,0,0,.08),0 2px 12px rgba(0,0,0,.05),inset 0 1px 0 rgba(255,255,255,.95);
+}
+body:not(.dark) .fire-hero::before{background:radial-gradient(circle,rgba(255,255,255,.5),transparent 70%)}
+body:not(.dark) .fire-hero .fh-lbl{color:var(--txt2)}
+body:not(.dark) .fire-hero .fh-val{color:var(--txt)}
+body:not(.dark) .fire-hero .fh-sub{color:var(--txt2)}
+body:not(.dark) .fire-hero .fire-trk{background:rgba(0,0,0,.1)}
+body:not(.dark) .fire-hero .fire-row{color:var(--txt3)}
+
+/* Stat cards — frosted white glass */
+.stat-card{border-radius:var(--r);padding:13px;transition:box-shadow .2s;border:1px solid transparent}
+body:not(.dark) .stat-card{box-shadow:0 2px 12px rgba(0,0,0,.07),inset 0 1px 0 rgba(255,255,255,.9)}
+body:not(.dark) .sc-pur{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(248,248,255,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-pur::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-blu{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(248,248,255,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-blu::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-grn{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(248,255,252,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-grn::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-amb{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,253,248,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-amb::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-red{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,250,250,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-red::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-tel{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(248,252,255,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-tel::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-grn2{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(248,255,252,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-grn2::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-pnk{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,250,253,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-pnk::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-ind{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(250,250,255,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-ind::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+body:not(.dark) .sc-org{background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,253,248,.75));border-color:rgba(255,255,255,.7)}
+body:not(.dark) .sc-org::before{background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%)}
+
+/* Stat card text — light mode uses dark readable text */
+body:not(.dark) .sc-lbl{color:var(--txt3)}
+body:not(.dark) .sc-val{color:var(--txt)}
+body:not(.dark) .sc-sub{color:var(--txt3)}
+body:not(.dark) .sc-val.grn{color:var(--grn)}
+body:not(.dark) .sc-val.blu{color:var(--blu)}
+body:not(.dark) .sc-val.amb{color:var(--amb)}
+body:not(.dark) .sc-val.pur{color:var(--pur)}
+body:not(.dark) .sc-val.tel{color:var(--tel)}
+body:not(.dark) .sc-val.red{color:var(--red)}
+
+/* Content cards — frosted white glass */
+.card{border-radius:var(--r);margin:0 16px 10px;padding:15px;transition:box-shadow .2s,border-color .2s;will-change:opacity,transform;background:rgba(255,255,255,.85)}
+body:not(.dark) .card{
+  background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));
+  border:1px solid rgba(255,255,255,.75);
+  box-shadow:0 2px 14px rgba(0,0,0,.07),inset 0 1px 0 rgba(255,255,255,.95);
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+body:not(.dark) .card-ttl{color:var(--txt)}
+/* Per-tab — all frosted white, no colour tints */
+body:not(.dark) #p-home .card:nth-child(1){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-home .card:nth-child(2){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #card-us-breakdown{background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #card-in-breakdown{background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-assets .card:not(#card-us-breakdown):not(#card-in-breakdown){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-fire .card:nth-child(1){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-fire .card:nth-child(2){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-passive .card:nth-child(1){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-passive .card:nth-child(2){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-passive .card:nth-child(3),body:not(.dark) #sp-passive .card:nth-child(4),body:not(.dark) #sp-passive .card:nth-child(5){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-dividends .card:nth-child(1){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-dividends .card:nth-child(2){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-dividends .card:nth-child(3){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-dividends .card:nth-child(4){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #sp-dividends .card:nth-child(5){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-more .card:nth-child(1),body:not(.dark) #p-more .card:nth-child(2){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-more .card:nth-child(3){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+body:not(.dark) #p-more .card:nth-child(4){background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.72));border-color:rgba(255,255,255,.75)}
+
+/* Card interior text — light mode uses normal theme colours */
+body:not(.dark) .card-ttl{color:var(--txt)}
+body:not(.dark) .card .al-lbl{color:var(--txt)!important}
+body:not(.dark) .card .al-val{color:var(--txt2)!important}
+body:not(.dark) .card .seg{background:rgba(0,0,0,.05)!important;border-color:rgba(0,0,0,.1)!important}
+body:not(.dark) .card .seg-b{color:var(--txt3)!important}
+body:not(.dark) .card .seg-b.active{background:#fff!important;color:var(--txt)!important;border-color:rgba(0,0,0,.12)!important;box-shadow:0 1px 4px rgba(0,0,0,.08)!important}
+body:not(.dark) .card .dmc{background:rgba(0,0,0,.04)!important;border-color:rgba(0,0,0,.1)!important}
+body:not(.dark) .card .dmc-label{color:var(--txt3)!important}
+body:not(.dark) .card .dmc-inp{color:var(--tel)!important}
+body:not(.dark) .card .cell-inp{background:#fff!important;border-color:rgba(0,0,0,.1)!important;color:var(--txt)!important}
+body:not(.dark) .card [style*="border-top:1px solid var(--brd)"]{border-top-color:rgba(0,0,0,.08)!important}
+
+/* Dark mode card interiors */
+.dark .card{border-color:rgba(255,255,255,.07);box-shadow:0 4px 20px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.05)}
+.dark .card-ttl{color:rgba(255,255,255,.9)}
+.dark .card .al-lbl{color:rgba(255,255,255,.85)!important}
+.dark .card .al-val{color:rgba(255,255,255,.5)!important}
+.dark .card .seg{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.12)!important}
+.dark .card .seg-b{color:rgba(255,255,255,.45)!important}
+.dark .card .seg-b.active{background:rgba(255,255,255,.15)!important;color:#fff!important;border-color:rgba(255,255,255,.22)!important}
+.dark .card .dmc{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.1)!important}
+.dark .card .dmc-label{color:rgba(255,255,255,.45)!important}
+.dark .card .dmc-inp{color:#67e8f9!important}
+.dark .card .cell-inp{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.12)!important;color:rgba(255,255,255,.9)!important}
+.dark .card [style*="border-top:1px solid var(--brd)"]{border-top-color:rgba(255,255,255,.1)!important}
+.dark .card .py-tbl th,.dark .card .htbl th,.dark .card .div-hist-tbl th{color:rgba(255,255,255,.45)!important;background:rgba(255,255,255,.05)!important}
+.dark .card .py-tbl td,.dark .card .htbl td,.dark .card .div-hist-tbl td{color:rgba(255,255,255,.7)!important;border-bottom-color:rgba(255,255,255,.07)!important}
+.dark .card .py-tbl td:first-child,.dark .card .htbl td:first-child,.dark .card .div-hist-tbl td:first-child{color:rgba(255,255,255,.9)!important}
+.dark .card .py-tbl .pos,.dark .card .htbl .pos,.dark .card .div-hist-tbl .pos{color:#4ade80!important}
+.dark .card .htbl .neg{color:#fca5a5!important}
+.dark .card .py-tbl .tr-row td,.dark .card .htbl .tr-row td{background:rgba(255,255,255,.08)!important;color:#fff!important}
+.dark .card .div-hist-tbl .tr-row td{color:#c4b5fd!important;background:rgba(255,255,255,.06)!important}
+
+/* .card-hdr always needs z-index above ::after shimmer */
+.card-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;position:relative;z-index:1}
+.card-ttl{font-size:13px;font-weight:700;letter-spacing:-.2px}
+
+/* ── HERO STRUCTURE (mode-independent) ── */
+.hero{margin:0 16px 12px;border-radius:var(--r);padding:20px 18px}
+.fire-hero{margin:0 16px 12px;border-radius:var(--r);padding:20px 18px}
+.h-lbl,.fh-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;margin-bottom:5px}
+.h-val,.fh-val{font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1}
+.h-sub,.fh-sub{font-size:12px;margin-top:4px}
+.h-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.hbadge{display:inline-flex;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:var(--rp);padding:3px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,.75)}
+.hbadge.g{color:#4ade80;background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.25)}
+.hbadge.a{color:#fbbf24;background:rgba(251,191,36,.15);border-color:rgba(251,191,36,.25)}
+.fire-trk{height:5px;background:rgba(255,255,255,.15);border-radius:var(--rp);overflow:hidden;margin-top:11px}
+.fire-fill{height:100%;background:linear-gradient(90deg,#4ade80,#22d3ee);border-radius:var(--rp);transition:width 1s ease}
+.fire-row{display:flex;justify-content:space-between;margin-top:4px;font-size:10px;font-weight:500}
+/* Dark mode hero text */
+.dark .h-lbl,.dark .fh-lbl{color:rgba(255,255,255,.55)}
+.dark .h-val,.dark .fh-val{color:#fff}
+.dark .h-sub,.dark .fh-sub{color:rgba(255,255,255,.45)}
+.dark .fire-row{color:rgba(255,255,255,.4)}
+
+/* ── STAT GRID STRUCTURE ── */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 16px;margin-bottom:10px}
+.sc-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.sc-val{font-size:19px;font-weight:800;letter-spacing:-.4px;line-height:1.2}
+.sc-sub{font-size:11px;margin-top:2px}
+/* Dark mode stat text */
+.dark .sc-lbl{color:rgba(255,255,255,.5)}
+.dark .sc-val{color:#fff}
+.dark .sc-sub{color:rgba(255,255,255,.38)}
+.dark .sc-val.grn{color:#4ade80}.dark .sc-val.blu{color:#93c5fd}.dark .sc-val.amb{color:#fcd34d}
+.dark .sc-val.pur{color:#c4b5fd}.dark .sc-val.tel{color:#67e8f9}.dark .sc-val.red{color:#fca5a5}
+.slbl{font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.7px;padding:6px 20px 4px}
+
+/* CHARTS */
+.cw{position:relative;width:100%}
+.cw-160{height:160px}.cw-180{height:180px}.cw-200{height:200px}.cw-220{height:220px}
+
+/* ALLOC — fixed layout: donut left, legend below or right */
+.alloc-wrap{display:flex;flex-direction:column;gap:10px}
+.alloc-donut-box{position:relative;height:160px;width:100%}
+.alloc-legend-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px}
+.al-item{display:flex;align-items:center;gap:5px;min-width:0}
+.al-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.al-lbl{font-size:11px;font-weight:500;color:var(--txt);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.al-val{font-size:10px;font-weight:700;color:var(--txt3);white-space:nowrap;flex-shrink:0}
+
+/* ASSET ROWS */
+.asset-row{
+  display:flex;align-items:center;gap:9px;padding:10px 14px;
+  background:rgba(255,255,255,.82);border-radius:12px;margin:0 16px 6px;
+  border:1px solid rgba(255,255,255,.7);cursor:pointer;
+  transition:background .15s,box-shadow .2s;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:0 1px 6px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.95);
+}
+.dark .asset-row{
+  background:linear-gradient(145deg,rgba(10,12,28,.75),rgba(8,14,32,.65));
+  border-color:rgba(255,255,255,0.07);
+  box-shadow:0 1px 8px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.asset-row:active{background:var(--surf2)}
+.asset-row:active{background:var(--surf2)}
+.asset-ic{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.asset-info{flex:1;min-width:0}
+.asset-name{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pb-wrap{background:var(--surf3);border-radius:100px;height:6px;overflow:hidden;margin-top:5px}
+.pb-fill{height:100%;border-radius:100px;transition:width .7s ease}
+.asset-val{text-align:right;flex-shrink:0}
+.asset-v1{font-size:14px;font-weight:800;letter-spacing:-.2px}
+.asset-v2{font-size:10px;color:var(--txt3);margin-top:1px}
+.asset-del{background:none;border:none;cursor:pointer;color:var(--txt4);font-size:17px;padding:4px;line-height:1;flex-shrink:0}
+.asset-del:hover{color:var(--red)}
+
+/* TAGS */
+.tag{font-size:10px;font-weight:700;border-radius:6px;padding:2px 6px;background:var(--surf2);border:1px solid var(--brd);color:var(--txt3);white-space:nowrap}
+.tag.g{background:var(--gdim);color:var(--grn);border-color:rgba(22,163,74,.2)}
+.tag.b{background:var(--bdim);color:var(--blu);border-color:rgba(37,99,235,.2)}
+.tag.a{background:var(--adim);color:var(--amb);border-color:rgba(217,119,6,.2)}
+.tag.t{background:var(--tdim);color:var(--tel);border-color:rgba(8,145,178,.2)}
+.tag.p{background:var(--pdim);color:var(--pur);border-color:rgba(124,58,237,.2)}
+
+/* SHEET */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(10px) saturate(160%);-webkit-backdrop-filter:blur(10px) saturate(160%)}
+.overlay.open{opacity:1;pointer-events:all}
+.sheet{
+  position:fixed;bottom:0;left:50%;
+  transform:translateX(-50%) translateY(102%);
+  width:100%;max-width:480px;
+  background:var(--surf);
+  border-radius:var(--r) var(--r) 0 0;
+  z-index:301;
+  transition:transform .38s cubic-bezier(.16,1,.3,1);
+  max-height:92vh;overflow-y:auto;padding-bottom:28px;
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  box-shadow:0 -8px 40px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.dark .sheet{
+  background:linear-gradient(180deg,rgba(26,25,36,0.97),rgba(20,19,30,0.99));
+  box-shadow:0 -8px 40px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.sheet.open{transform:translateX(-50%) translateY(0)}
+.sh-handle{width:36px;height:4px;background:var(--surf3);border-radius:2px;margin:12px auto 14px}
+.sh-title{font-size:17px;font-weight:800;padding:0 20px 14px;letter-spacing:-.3px}
+
+/* FORMS */
+.fg{display:flex;flex-direction:column;gap:5px;margin:0 20px 12px}
+.fg label{font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.6px}
+.fg input,.fg select{background:var(--surf2);border:1.5px solid var(--brd);border-radius:10px;padding:11px 13px;font-size:15px;color:var(--txt);outline:none;transition:border-color .2s;-webkit-appearance:none;width:100%}
+.fg input:focus,.fg select:focus{border-color:var(--pur)}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 20px;margin-bottom:12px}
+.fg2 .fg{margin:0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:7px 14px;border-radius:var(--rp);font-size:12px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd);background:var(--surf2);color:var(--txt2);transition:all .18s;user-select:none;white-space:nowrap;font-family:Helvetica,Arial,sans-serif}
+.btn:active{opacity:.8}
+.btn.primary{background:var(--pur);border-color:var(--pur);color:#fff}
+.btn.danger{background:var(--rdim);border-color:rgba(220,38,38,.2);color:var(--red)}
+.btn.full{width:calc(100% - 40px);margin:0 20px;padding:13px;font-size:14px}
+.btn.sm{padding:5px 11px;font-size:11px}
+.btn.xs{padding:3px 8px;font-size:11px}
+.seg{
+  display:flex;gap:2px;background:var(--surf2);
+  border:1px solid var(--brd);border-radius:var(--rp);padding:3px;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.dark .seg{background:rgba(26,25,36,0.7);border-color:rgba(255,255,255,0.09)}
+.seg-b{padding:4px 10px;border-radius:var(--rp);font-size:11px;font-weight:700;cursor:pointer;color:var(--txt3);border:none;background:transparent;font-family:Helvetica,Arial,sans-serif;transition:all .18s}
+.seg-b.active{background:var(--surf);color:var(--txt);border:1px solid var(--brd2);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+
+/* SAVE BAR — sticky top notification */
+.save-bar{
+  position:sticky;top:0;z-index:100;
+  background:linear-gradient(135deg,rgba(124,58,237,0.92),rgba(109,40,217,0.95));
+  color:#fff;display:none;align-items:center;justify-content:space-between;
+  padding:9px 16px;font-size:13px;font-weight:700;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 2px 20px rgba(124,58,237,0.4);
+}
+.save-bar.visible{display:flex}
+.save-bar-btn{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:var(--rp);padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;color:#fff;font-family:Helvetica,Arial,sans-serif}
+
+/* TOAST */
+.toast{position:fixed;bottom:calc(var(--nav) + 42px);left:50%;transform:translateX(-50%) translateY(24px);background:var(--surf);border:1px solid var(--brd2);border-radius:var(--rp);padding:10px 20px;font-size:13px;font-weight:700;color:var(--txt);z-index:500;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap;box-shadow:var(--sh2)}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.toast.s{color:var(--grn)}
+
+/* SUB TABS (Income page) */
+.stab-row{
+  display:flex;gap:2px;background:var(--surf2);
+  border:1px solid var(--brd);border-radius:var(--rp);
+  padding:3px;margin:0 16px 10px;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.dark .stab-row{
+  background:rgba(26,25,36,0.7);
+  border-color:rgba(255,255,255,0.09);
+}
+.stab{flex:1;padding:7px 4px;border-radius:var(--rp);font-size:12px;font-weight:700;cursor:pointer;color:var(--txt3);border:none;background:transparent;font-family:Helvetica,Arial,sans-serif;transition:all .18s;text-align:center}
+.stab.active{background:var(--surf);color:var(--txt);border:1px solid var(--brd2);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.stab-pane{display:none}.stab-pane.active{display:block}
+
+/* PASSIVE YEAR TABLE */
+.py-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.py-tbl th{padding:7px 8px;text-align:left;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--txt3);border-bottom:1px solid var(--brd);background:var(--surf2)}
+.py-tbl td{padding:8px 8px;border-bottom:1px solid var(--brd);color:var(--txt2);vertical-align:middle}
+.py-tbl td:first-child{color:var(--txt);font-weight:600;font-size:13px}
+.py-tbl tr:last-child td{border-bottom:none}
+.py-tbl .pos{color:var(--grn)!important;font-weight:700}
+.py-tbl .tr-row td{font-weight:800!important;color:var(--txt)!important;background:var(--surf2)!important}
+.cell-inp{background:var(--surf2);border:1.5px solid var(--brd);border-radius:7px;padding:4px 7px;font-size:12px;font-weight:800;outline:none;text-align:right;transition:border-color .2s;font-family:Helvetica,Arial,sans-serif;width:82px}
+.cell-inp:focus{border-color:var(--pur)}
+.cell-inp.tel{color:var(--tel)}.cell-inp.amb{color:var(--amb)}.cell-inp.grn{color:var(--grn)}
+
+/* DIVIDENDS */
+.div-mo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.dmc{background:var(--surf2);border:1.5px solid var(--brd);border-radius:11px;padding:9px 7px;text-align:center;transition:border-color .2s}
+.dmc:focus-within{border-color:var(--tel)}
+.dmc-label{font-size:10px;font-weight:700;color:var(--txt3);margin-bottom:4px}
+.dmc-inp{background:transparent;border:none;outline:none;font-size:14px;font-weight:800;color:var(--tel);width:100%;text-align:center;font-family:Helvetica,Arial,sans-serif}
+.div-hist-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.div-hist-tbl{width:100%;border-collapse:collapse;font-size:11px}
+.div-hist-tbl th{padding:6px 7px;text-align:right;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--txt3);border-bottom:1px solid var(--brd);background:var(--surf2);white-space:nowrap}
+.div-hist-tbl th:first-child{text-align:left}
+.div-hist-tbl td{padding:6px 7px;border-bottom:1px solid var(--brd);color:var(--txt2);text-align:right;white-space:nowrap}
+.div-hist-tbl td:first-child{text-align:left;font-weight:700;color:var(--txt)}
+.div-hist-tbl tr:last-child td{border-bottom:none}
+.div-hist-tbl .pos{color:var(--tel)!important;font-weight:700}
+.div-hist-tbl .tr-row td{font-weight:800;color:var(--pur)!important;background:var(--surf2)!important}
+
+/* YR CHIPS */
+.yr-scrl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:0 16px 2px}
+.yr-scrl::-webkit-scrollbar{display:none}
+.yr-chip{
+  padding:5px 12px;border-radius:var(--rp);font-size:11px;font-weight:700;
+  background:var(--surf);border:1.5px solid var(--brd);color:var(--txt3);
+  cursor:pointer;transition:all .15s;white-space:nowrap;flex-shrink:0;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.dark .yr-chip{
+  background:rgba(22,21,30,0.7);
+  border-color:rgba(255,255,255,0.09);
+}
+.yr-chip.active{background:var(--pdim);border-color:var(--pur);color:var(--pur)}
+
+/* SETTINGS */
+.set-row{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--brd)}
+.set-row:last-child{border-bottom:none}
+.set-info h4{font-size:14px;font-weight:700}
+.set-info p{font-size:12px;color:var(--txt3);margin-top:2px}
+.tog{width:44px;height:26px;border-radius:13px;background:var(--surf3);position:relative;cursor:pointer;transition:background .3s;flex-shrink:0;border:none}
+.tog.on{background:var(--pur)}
+.tog::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:#fff;top:3px;left:3px;transition:transform .3s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.tog.on::after{transform:translateX(18px)}
+
+/* HISTORY TABLE */
+.htbl{width:100%;border-collapse:collapse;font-size:12px}
+.htbl th{padding:7px 10px;text-align:left;color:var(--txt3);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--brd);background:var(--surf2)}
+.htbl td{padding:8px 10px;border-bottom:1px solid var(--brd);color:var(--txt2);vertical-align:middle}
+.htbl td:first-child{color:var(--txt);font-weight:700}
+.htbl tr:last-child td{border-bottom:none}
+.htbl .pos{color:var(--grn)!important;font-weight:700}.htbl .neg{color:var(--red)!important;font-weight:700}
+.ovx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="pages">
+
+<!-- HOME -->
+<div class="page active" id="p-home">
+  <div class="ph">
+    <div>
+      <div style="font-size:10px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.6px" id="last-upd">—</div>
+      <div class="ph-title">Net Worth</div>
+    </div>
+    <div class="hrow">
+      <div class="fx-pill">
+        <span class="fx-l">₹/$</span>
+        <input class="fx-inp" type="number" id="fx-rate" value="92.6" step="0.1" oninput="onFx()">
+        <span class="fx-b" id="fx-b">₹92.6</span>
+      </div>
+      <button class="icon-btn" onclick="toggleTheme()">
+        <svg viewBox="0 0 24 24" id="theme-ic"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="hero h-total">
+    <div class="h-lbl">Total Net Worth</div>
+    <div class="h-val" id="hnw-val">—</div>
+    <div class="h-sub" id="hnw-sub">— · —</div>
+    <div class="h-badges" id="hnw-badges"></div>
+    <div class="fire-trk"><div class="fire-fill" id="hnw-fire" style="width:0%"></div></div>
+    <div class="fire-row"><span id="hnw-fire-lbl">—</span><span id="hnw-fire-val">—</span></div>
+  </div>
+  <div class="stat-grid">
+    <div class="stat-card sc-blu"><div class="sc-lbl">🇺🇸 US Assets</div><div class="sc-val blu" id="st-us-usd">—</div><div class="sc-sub" id="st-us-inr">—</div></div>
+    <div class="stat-card sc-amb"><div class="sc-lbl">🇮🇳 India Assets</div><div class="sc-val amb" id="st-in-inr">—</div><div class="sc-sub" id="st-in-usd">—</div></div>
+    <div class="stat-card sc-grn"><div class="sc-lbl">💰 Passive/yr</div><div class="sc-val grn" id="st-passive">—</div><div class="sc-sub" id="st-passive-mo">—</div></div>
+    <div class="stat-card sc-tel"><div class="sc-lbl">📈 Dividends/yr</div><div class="sc-val tel" id="st-div">—</div><div class="sc-sub" id="st-div-inr">—</div></div>
+    <div class="stat-card sc-pur"><div class="sc-lbl">📊 CAGR (2020)</div><div class="sc-val pur" id="st-cagr">—</div><div class="sc-sub">Portfolio CAGR</div></div>
+    <div class="stat-card sc-grn2"><div class="sc-lbl">📅 YoY Growth</div><div class="sc-val grn" id="st-yoy">—</div><div class="sc-sub">vs prior year</div></div>
+  </div>
+  <div class="card">
+    <div class="card-hdr">
+      <div class="card-ttl">Net Worth History</div>
+      <div class="seg"><button class="seg-b active" onclick="setSeg('nw','line',this)">Line</button><button class="seg-b" onclick="setSeg('nw','bar',this)">Bar</button></div>
+    </div>
+    <div class="cw cw-220"><canvas id="ch-nw" role="img" aria-label="Net worth history"></canvas></div>
+  </div>
+  <!-- Allocation: full-width donut + 2-col legend below -->
+  <div class="card">
+    <div class="card-hdr"><div class="card-ttl">Asset Allocation</div></div>
+    <div class="alloc-wrap">
+      <div class="alloc-donut-box"><canvas id="ch-alloc" role="img" aria-label="Asset allocation donut"></canvas></div>
+      <div class="alloc-legend-grid" id="alloc-legend"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ASSETS -->
+<div class="page" id="p-assets">
+  <!-- Save bar -->
+  <div class="save-bar" id="assets-save-bar">
+    <span>Unsaved changes</span>
+    <button class="save-bar-btn" onclick="saveAllAssets()">💾 Save All</button>
+  </div>
+  <div class="ph">
+    <div><div class="ph-title">Assets</div></div>
+    <div class="hrow">
+      <button class="btn sm" onclick="openSheet('sh-us')">+ US</button>
+      <button class="btn sm primary" onclick="openSheet('sh-in')">+ India</button>
+    </div>
+  </div>
+  <div class="slbl">🇺🇸 US Portfolio</div>
+  <div class="card" id="card-us-breakdown" style="margin-bottom:8px">
+    <div class="cw cw-180"><canvas id="ch-us-cat" role="img" aria-label="US categories"></canvas></div>
+  </div>
+  <div id="us-list"></div>
+  <div class="slbl" style="margin-top:6px">🇮🇳 India Portfolio</div>
+  <div class="card" id="card-in-breakdown" style="margin-bottom:8px">
+    <div class="cw cw-180"><canvas id="ch-in-cat" role="img" aria-label="India categories"></canvas></div>
+  </div>
+  <div id="in-list"></div>
+  <div class="slbl" style="margin-top:6px">Year-by-Year History</div>
+  <div class="yr-scrl" id="asset-yr-row" style="margin-bottom:8px"></div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="ovx"><table class="htbl"><thead><tr><th>Asset</th><th>Cat</th><th style="text-align:right">Value</th></tr></thead><tbody id="asset-hist-body"></tbody></table></div>
+  </div>
+</div>
+
+<!-- FIRE -->
+<div class="page" id="p-fire">
+  <div class="ph"><div class="ph-title">FIRE</div><button class="btn sm primary" onclick="openSheet('sh-fire')">⚙ Edit</button></div>
+  <div class="fire-hero">
+    <div class="fh-lbl">🔥 FIRE Progress</div>
+    <div class="fh-val" id="fire-pct">—</div>
+    <div class="fh-sub" id="fire-sub">—</div>
+    <div class="fire-trk" style="margin-top:12px"><div class="fire-fill" id="fire-bar" style="width:0%"></div></div>
+    <div class="fire-row"><span id="fire-bar-lbl">—</span><span id="fire-bar-val">—</span></div>
+  </div>
+  <div class="stat-grid">
+    <div class="stat-card sc-pur"><div class="sc-lbl">🎯 FIRE Number</div><div class="sc-val pur" id="fire-num">—</div><div class="sc-sub">Target corpus</div></div>
+    <div class="stat-card sc-grn"><div class="sc-lbl">🏦 Current NW</div><div class="sc-val grn" id="fire-nw">—</div><div class="sc-sub">Total portfolio</div></div>
+    <div class="stat-card sc-red"><div class="sc-lbl">📉 Gap</div><div class="sc-val red" id="fire-gap">—</div><div class="sc-sub">Remaining</div></div>
+    <div class="stat-card sc-amb"><div class="sc-lbl">🗓 ETA</div><div class="sc-val amb" id="fire-eta">—</div><div class="sc-sub">At current CAGR</div></div>
+    <div class="stat-card sc-blu"><div class="sc-lbl">💸 Monthly Exp</div><div class="sc-val blu" id="fire-exp">—</div><div class="sc-sub">Current spending</div></div>
+    <div class="stat-card sc-tel"><div class="sc-lbl">📊 SWR</div><div class="sc-val tel" id="fire-swr">—</div><div class="sc-sub">Withdrawal rate</div></div>
+  </div>
+  <div class="card">
+    <div class="card-hdr"><div class="card-ttl">Portfolio Projection</div><div style="font-size:11px;color:var(--txt3)">at current CAGR</div></div>
+    <div class="cw cw-220"><canvas id="ch-fire-proj" role="img" aria-label="FIRE projection"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-hdr"><div class="card-ttl">Passive vs Expense</div></div>
+    <div class="cw cw-180"><canvas id="ch-fire-passive" role="img" aria-label="Passive vs expense"></canvas></div>
+  </div>
+</div>
+
+<!-- INCOME -->
+<div class="page" id="p-income">
+  <div class="ph">
+    <div><div class="ph-title">Income</div></div>
+    <div class="hrow" id="income-hdr-btns"></div>
+  </div>
+  <div class="stab-row">
+    <button class="stab active" id="stab-passive" onclick="setIncomeTab('passive')">💰 Passive</button>
+    <button class="stab" id="stab-dividends" onclick="setIncomeTab('dividends')">📈 Dividends</button>
+  </div>
+
+  <!-- PASSIVE PANE -->
+  <div class="stab-pane active" id="sp-passive">
+    <!-- Save bar -->
+    <div class="save-bar" id="passive-save-bar" style="margin:0 0 8px">
+      <span>Unsaved changes</span>
+      <button class="save-bar-btn" onclick="savePassiveIncome()">💾 Save</button>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card sc-grn"><div class="sc-lbl">💰 Annual Total</div><div class="sc-val grn" id="pi-annual">—</div><div class="sc-sub" id="pi-monthly">—/mo</div></div>
+      <div class="stat-card sc-tel"><div class="sc-lbl">📈 Dividends</div><div class="sc-val tel" id="pi-div">—</div><div class="sc-sub" id="pi-div-inr">—</div></div>
+      <div class="stat-card sc-amb"><div class="sc-lbl">🏛 FD Interest</div><div class="sc-val amb" id="pi-fd">—</div><div class="sc-sub">Fixed deposits</div></div>
+      <div class="stat-card sc-ind"><div class="sc-lbl">🍎 Other</div><div class="sc-val blu" id="pi-other">—</div><div class="sc-sub">Interest etc.</div></div>
+    </div>
+    <!-- Passive history chart -->
+    <div class="card">
+      <div class="card-hdr"><div class="card-ttl">History</div>
+        <div class="seg"><button class="seg-b active" onclick="setSeg('pi','bar',this)">Bar</button><button class="seg-b" onclick="setSeg('pi','line',this)">Line</button></div>
+      </div>
+      <div class="cw cw-200"><canvas id="ch-passive" role="img" aria-label="Passive income history"></canvas></div>
+    </div>
+    <!-- Passive donut -->
+    <div class="card">
+      <div class="card-hdr"><div class="card-ttl">Breakdown</div></div>
+      <div class="alloc-wrap">
+        <div class="alloc-donut-box"><canvas id="ch-pi-donut" role="img" aria-label="Passive income breakdown"></canvas></div>
+        <div class="alloc-legend-grid" id="pi-donut-legend"></div>
+      </div>
+    </div>
+    <!-- Editable year-by-year passive table -->
+    <div class="slbl">Edit by Year — click value to edit</div>
+    <div style="margin:0 16px 8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <div class="yr-scrl" id="pi-yr-chips" style="padding:0;flex:1"></div>
+      <button class="btn xs primary" onclick="addPassiveYear()">+ Yr</button>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden" id="pi-year-card">
+      <div class="ovx">
+        <table class="py-tbl">
+          <thead><tr><th>Source</th><th>Cat</th><th style="text-align:right">Annual</th><th style="text-align:right">Monthly</th><th></th></tr></thead>
+          <tbody id="pi-yr-body"></tbody>
+          <tfoot id="pi-yr-foot"></tfoot>
+        </table>
+      </div>
+    </div>
+    <!-- Passive history log (read-only summary) -->
+    <div class="slbl" style="margin-top:6px">Historical Totals</div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="ovx">
+        <table class="htbl">
+          <thead><tr><th>Year</th><th style="text-align:right">FD (₹)</th><th style="text-align:right">Div ($)</th><th style="text-align:right">Other (₹)</th><th style="text-align:right">Total (₹)</th></tr></thead>
+          <tbody id="pi-hist-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIVIDENDS PANE -->
+  <div class="stab-pane" id="sp-dividends">
+    <div class="stat-grid">
+      <div class="stat-card sc-tel"><div class="sc-lbl">📅 This Year</div><div class="sc-val tel" id="dv-yr-total">—</div><div class="sc-sub" id="dv-yr-inr">—</div></div>
+      <div class="stat-card sc-org"><div class="sc-lbl">📊 Monthly Avg</div><div class="sc-val amb" id="dv-mo-avg">—</div><div class="sc-sub" id="dv-mo-sub">active months</div></div>
+      <div class="stat-card sc-pur"><div class="sc-lbl">🏆 All-Time</div><div class="sc-val pur" id="dv-alltime">—</div><div class="sc-sub">Total dividends</div></div>
+      <div class="stat-card sc-grn2"><div class="sc-lbl">📈 Best Year</div><div class="sc-val grn" id="dv-best">—</div><div class="sc-sub" id="dv-best-yr">—</div></div>
+    </div>
+    <!-- Year chips + add year button -->
+    <div style="padding:0 16px;margin-bottom:8px;display:flex;align-items:center;gap:8px">
+      <div class="yr-scrl" id="div-yr-chips" style="padding:0;flex:1;min-width:0"></div>
+      <button class="btn xs primary" style="flex-shrink:0" onclick="addDivYear()">+ Year</button>
+    </div>
+    <!-- Monthly entry grid -->
+    <div class="card" id="div-entry-card">
+      <div class="card-hdr">
+        <div class="card-ttl" id="div-entry-title">2026 Monthly</div>
+        <button class="btn sm primary" onclick="saveDividends()">💾 Save</button>
+      </div>
+      <div class="div-mo-grid" id="div-mo-grid"></div>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--brd);display:flex;justify-content:space-between;align-items:center">
+        <div><div style="font-size:10px;color:var(--txt3)">Annual total</div><div style="font-size:19px;font-weight:800;color:var(--tel)" id="div-mo-total">—</div></div>
+        <div style="text-align:right"><div style="font-size:10px;color:var(--txt3)">In INR</div><div style="font-size:13px;font-weight:700;color:var(--grn)" id="div-mo-inr">—</div></div>
+      </div>
+    </div>
+    <!-- Annual trend chart -->
+    <div class="card">
+      <div class="card-hdr"><div class="card-ttl">Annual Trend</div></div>
+      <div class="cw cw-200"><canvas id="ch-div-yr" role="img" aria-label="Annual dividend trend"></canvas></div>
+    </div>
+    <!-- Monthly chart -->
+    <div class="card">
+      <div class="card-hdr"><div class="card-ttl" id="div-mo-chart-title">Monthly Breakdown</div></div>
+      <div class="cw cw-180"><canvas id="ch-div-mo" role="img" aria-label="Monthly dividends"></canvas></div>
+    </div>
+    <!-- Projection -->
+    <div class="card">
+      <div class="card-hdr"><div class="card-ttl">10-Year Projection</div><div style="font-size:10px;color:var(--txt3)">at 10% annual growth</div></div>
+      <div class="cw cw-180"><canvas id="ch-div-proj" role="img" aria-label="Dividend projection"></canvas></div>
+    </div>
+    <!-- Cross-year history table -->
+    <div class="slbl" style="margin-top:4px">Full History — All Years</div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="div-hist-wrap">
+        <table class="div-hist-tbl"><thead id="div-hist-head"></thead><tbody id="div-hist-body"></tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MORE -->
+<div class="page" id="p-more">
+  <div class="ph"><div class="ph-title">More</div></div>
+  <div class="slbl">Sync & Backup</div>
+  <div class="card" style="padding:0">
+    <div class="set-row" onclick="exportJSON()" style="cursor:pointer">
+      <div class="set-info"><h4>⬆ Export JSON</h4><p>Save to Google Drive / iCloud</p></div>
+      <svg style="width:15px;height:15px;stroke:var(--txt3);fill:none;stroke-width:2;stroke-linecap:round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </div>
+    <label class="set-row" style="cursor:pointer">
+      <input type="file" accept=".json" style="display:none" onchange="importJSON(event)">
+      <div class="set-info"><h4>⬇ Import JSON</h4><p>Restore from cloud backup</p></div>
+      <svg style="width:15px;height:15px;stroke:var(--txt3);fill:none;stroke-width:2;stroke-linecap:round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    </label>
+    <div class="set-row" style="padding:10px 20px;background:var(--surf2);font-size:12px;color:var(--txt3)">
+      <span>📱 Export JSON → Google Drive/iCloud → import on other device</span>
+    </div>
+  </div>
+  <div class="slbl">Preferences</div>
+  <div class="card" style="padding:0">
+    <div class="set-row"><div class="set-info"><h4>Dark Mode</h4><p>Toggle theme</p></div><button class="tog" id="tog-theme" onclick="toggleTheme()"></button></div>
+    <div class="set-row"><div class="set-info"><h4>FX Rate (₹/$)</h4><p>USD to INR</p></div>
+      <input type="number" style="width:75px;background:var(--surf2);border:1px solid var(--brd);border-radius:8px;padding:5px 9px;font-size:14px;font-weight:700;color:var(--txt);text-align:right;outline:none;font-family:Helvetica,Arial,sans-serif" id="fx-rate-s" value="92.6" oninput="onFxS(this.value)">
+    </div>
+  </div>
+  <div class="slbl">Log Snapshot</div>
+  <div class="card">
+    <div class="fg"><label>Date</label><input type="date" id="log-date"></div>
+    <div class="fg"><label>Year</label><input type="number" id="log-year" value="2026"></div>
+    <div class="fg"><label>Notes</label><input type="text" id="log-notes" placeholder="e.g. Q2 update"></div>
+    <button class="btn primary full" style="margin-top:4px" onclick="saveSnapshot()">💾 Save Snapshot</button>
+  </div>
+  <div class="slbl">NW History</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="ovx"><table class="htbl">
+      <thead><tr><th>Year</th><th style="text-align:right">NW (₹)</th><th style="text-align:right">NW ($)</th><th style="text-align:right">YoY</th><th></th></tr></thead>
+      <tbody id="log-body"></tbody>
+    </table></div>
+  </div>
+  <div style="padding:20px;text-align:center;color:var(--txt3);font-size:11px">Abhinav · Net Worth v3 · localStorage + JSON sync</div>
+</div>
+
+</div><!-- pages -->
+
+<nav id="bnav">
+  <button class="bni active" id="bn-home" onclick="showPage('home',this)">
+    <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home
+  </button>
+  <button class="bni" id="bn-assets" onclick="showPage('assets',this)">
+    <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Assets
+  </button>
+  <button class="bni" id="bn-fire" onclick="showPage('fire',this)">
+    <svg viewBox="0 0 24 24"><path d="M12 2c0 0-6 6-6 13a6 6 0 0 0 12 0c0-7-6-13-6-13z"/><path d="M12 18c-1.1 0-2-.9-2-2s2-4 2-4 2 2.9 2 4-.9 2-2 2z"/></svg>FIRE
+  </button>
+  <button class="bni" id="bn-income" onclick="showPage('income',this)">
+    <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Income
+  </button>
+  <button class="bni" id="bn-more" onclick="showPage('more',this)">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>More
+  </button>
+</nav>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeSheets()"></div>
+
+<!-- ADD US ASSET -->
+<div class="sheet" id="sh-us">
+  <div class="sh-handle"></div>
+  <div class="sh-title" id="sh-us-title">Add US Asset</div>
+  <input type="hidden" id="sh-us-id">
+  <div class="fg"><label>Asset Name</label><input type="text" id="us-nm" placeholder="e.g. 📈 Robinhood"></div>
+  <div class="fg2">
+    <div class="fg"><label>Category</label><select id="us-cat"><option>Equity</option><option>Savings</option><option>Credit</option><option>Retirement</option><option>Crypto</option><option>Other</option></select></div>
+    <div class="fg"><label>Value (USD $)</label><input type="number" id="us-val" placeholder="0" min="0"></div>
+  </div>
+  <button class="btn primary full" onclick="saveUSAsset()">Save Asset</button>
+  <br><button class="btn full" onclick="closeSheets()" style="margin-top:6px">Cancel</button>
+</div>
+
+<!-- ADD INDIA ASSET -->
+<div class="sheet" id="sh-in">
+  <div class="sh-handle"></div>
+  <div class="sh-title" id="sh-in-title">Add India Asset</div>
+  <input type="hidden" id="sh-in-id">
+  <div class="fg"><label>Asset Name</label><input type="text" id="in-nm" placeholder="e.g. 📊 Kotak MF"></div>
+  <div class="fg2">
+    <div class="fg"><label>Category</label><select id="in-cat"><option>MF</option><option>Savings</option><option>FD/Debt</option><option>ULIP</option><option>Retirement</option><option>Equity</option><option>Other</option></select></div>
+    <div class="fg"><label>Value (INR ₹)</label><input type="number" id="in-val" placeholder="0" min="0"></div>
+  </div>
+  <button class="btn primary full" onclick="saveINAsset()">Save Asset</button>
+  <br><button class="btn full" onclick="closeSheets()" style="margin-top:6px">Cancel</button>
+</div>
+
+<!-- ADD PASSIVE SOURCE -->
+<div class="sheet" id="sh-passive">
+  <div class="sh-handle"></div>
+  <div class="sh-title" id="sh-passive-title">Add Passive Source</div>
+  <input type="hidden" id="sh-pi-id">
+  <div class="fg"><label>Source Name</label><input type="text" id="pi-nm" placeholder="e.g. FD Interest"></div>
+  <div class="fg2">
+    <div class="fg"><label>Category</label><select id="pi-cat"><option>Dividend</option><option>FD</option><option>Interest</option><option>Rental</option><option>Other</option></select></div>
+    <div class="fg"><label>Currency</label><select id="pi-cur"><option value="INR">INR ₹</option><option value="USD">USD $</option></select></div>
+  </div>
+  <div class="fg"><label>Annual Value</label><input type="number" id="pi-val-sh" placeholder="0" min="0"></div>
+  <button class="btn primary full" onclick="savePassiveSheet()">Save Source</button>
+  <br><button class="btn full" onclick="closeSheets()" style="margin-top:6px">Cancel</button>
+</div>
+
+<!-- FIRE SETTINGS -->
+<div class="sheet" id="sh-fire">
+  <div class="sh-handle"></div>
+  <div class="sh-title">FIRE Settings</div>
+  <div class="fg"><label>Monthly Expense (₹)</label><input type="number" id="fire-exp-inp" placeholder="200000"></div>
+  <div class="fg"><label>FIRE Number Override (₹, 0=auto)</label><input type="number" id="fire-num-inp" placeholder="0"></div>
+  <div class="fg2">
+    <div class="fg"><label>SWR (%)</label><input type="number" id="fire-swr-inp" placeholder="4" step="0.1"></div>
+    <div class="fg"><label>Current Age</label><input type="number" id="fire-age-inp" placeholder="36"></div>
+  </div>
+  <div class="fg2">
+    <div class="fg"><label>CAGR Assumption (%)</label><input type="number" id="fire-cagr-inp" placeholder="23.5" step="0.1"></div>
+    <div class="fg"><label>Inflation (%)</label><input type="number" id="fire-inf-inp" placeholder="6" step="0.1"></div>
+  </div>
+  <button class="btn primary full" onclick="saveFireSettings()">Save Settings</button>
+</div>
+
+<div class="toast" id="toast">Saved</div>
+
+<script>
+const SK='abnw_v3';
+const MS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function defData(){return{
+  fxRate:92.6,currentYear:2026,
+  nwHistory:[
+    {year:2020,nwINR:13481334,nwUSD:145586.76,dividends:976.84,passive:480027},
+    {year:2021,nwINR:20038171,nwUSD:216394.94,dividends:2766.63,passive:763923},
+    {year:2022,nwINR:22054689,nwUSD:238171.59,dividends:3512.09,passive:687075},
+    {year:2023,nwINR:22462545,nwUSD:242576.08,dividends:3873.23,passive:887075},
+    {year:2024,nwINR:29600856,nwUSD:319663.67,dividends:4261,passive:1124037},
+    {year:2025,nwINR:40535828,nwUSD:437751.92,dividends:4688.69,passive:1197495},
+    {year:2026,nwINR:47523996,nwUSD:513218.1,dividends:2226.38,passive:1233212}
+  ],
+  usAssets:[
+    {id:'us1',name:'💳 AMEX',category:'Credit',hist:{2020:0,2021:0,2022:0,2023:0,2024:0,2025:0,2026:58708},current:58708},
+    {id:'us2',name:'🏦 BofA',category:'Savings',hist:{2020:12000,2021:42981,2022:45000,2023:48424,2024:60694,2025:84660,2026:15118},current:15118},
+    {id:'us3',name:'🇺🇸 Stocks (Portfolio)',category:'Equity',hist:{2020:55000,2021:106702,2022:100702,2023:94120,2024:118738,2025:134472,2026:149000},current:149000},
+    {id:'us4',name:'👤 Kuki BofA',category:'Savings',hist:{2020:0,2021:0,2022:0,2023:0,2024:4965,2025:20000,2026:35000},current:35000},
+    {id:'us5',name:'📈 Fidelity',category:'Equity',hist:{2020:0,2021:0,2022:0,2023:0,2024:21969,2025:79470,2026:109000},current:109000},
+    {id:'us6',name:'💼 M1 Finance',category:'Equity',hist:{2020:758,2021:302,2022:180,2023:167,2024:167,2025:177,2026:156},current:156}
+  ],
+  inAssets:[
+    {id:'in1',name:'🏦 Kotak',category:'Savings',hist:{2020:5363000,2021:7250894,2022:687029,2023:687029,2024:612067,2025:809000,2026:9959024},current:9959024},
+    {id:'in2',name:'📊 Bajaj Allianz',category:'ULIP',hist:{2020:12000,2021:156220,2022:563439,2023:563439,2024:797000,2025:985253,2026:979194},current:979194},
+    {id:'in3',name:'📊 Groww/SmallCase',category:'MF',hist:{2020:2000,2021:441055,2022:70104,2023:70104,2024:81890,2025:102890,2026:103000},current:103000},
+    {id:'in4',name:'🟠 Coin/Zerodha',category:'MF',hist:{2020:0,2021:0,2022:510000,2023:510000,2024:791000,2025:1022000,2026:978000},current:978000},
+    {id:'in5',name:'🏛 FD (Kotak)',category:'FD/Debt',hist:{2020:3000000,2021:1052165,2022:8041564,2023:8041564,2024:8494887,2025:9165544,2026:0},current:0},
+    {id:'in6',name:'🏦 HDFC',category:'Savings',hist:{2020:0,2021:152165,2022:113288,2023:113288,2024:772540,2025:806382,2026:815025},current:815025},
+    {id:'in7',name:'🏦 IDFC',category:'Savings',hist:{2020:0,2021:0,2022:0,2023:0,2024:0,2025:0,2026:79431},current:79431},
+    {id:'in8',name:'🔒 PF/Gratuity',category:'Retirement',hist:{2020:0,2021:0,2022:673671,2023:673671,2024:673671,2025:673671,2026:627789},current:627789},
+    {id:'in9',name:'🏦 SBI',category:'Savings',hist:{2020:158000,2021:59582,2022:0,2023:0,2024:0,2025:0,2026:0},current:0}
+  ],
+  // passiveIncome holds CURRENT values; passiveByYear holds per-year overrides
+  passiveIncome:[
+    {id:'p1',name:'🇺🇸 US Dividends',category:'Dividend',value:4688.69,currency:'USD'},
+    {id:'p2',name:'🍎 Apple Interest',category:'Interest',value:124279.45,currency:'INR'},
+    {id:'p3',name:'🏛 FD Interest (Kotak)',category:'FD',value:674760,currency:'INR'}
+  ],
+  // passiveByYear[year][sourceId] = annual value (overrides passiveIncome.value for that year)
+  passiveByYear:{
+    2020:{p1:90431,p2:0,p3:249960},
+    2021:{p1:256150,p2:0,p3:290694},
+    2022:{p1:325219,p2:0,p3:331500},
+    2023:{p1:358613,p2:0,p3:0},
+    2024:{p1:394558,p2:0,p3:667164},
+    2025:{p1:434224,p2:124279,p3:674760},
+    2026:{p1:206218,p2:124279,p3:674760}
+  },
+  passiveHist:[
+    {year:2020,fdINR:249960,divUSD:976.84,otherINR:0},
+    {year:2021,fdINR:290694,divUSD:2766.63,otherINR:0},
+    {year:2022,fdINR:331500,divUSD:3512.09,otherINR:0},
+    {year:2023,fdINR:0,divUSD:3873.23,otherINR:887075},
+    {year:2024,fdINR:667164,divUSD:4261,otherINR:0},
+    {year:2025,fdINR:674760,divUSD:4688.69,otherINR:124279},
+    {year:2026,fdINR:674760,divUSD:2226.38,otherINR:124279}
+  ],
+  dividends:{
+    2020:[0,3.47,14.1,9.84,45.63,55.18,71.79,122.06,135.87,120.15,167.46,231.29],
+    2021:[165.34,202.03,247.37,182.24,208.39,266.75,193.55,236.36,304.82,169.5,242.53,347.75],
+    2022:[178.6,260.86,381.67,210.56,254.79,402,224.31,269.81,394,223.65,280.97,430.87],
+    2023:[206.75,252.53,428.55,243.76,291.21,468.54,208.44,286.78,480.28,228.64,282.45,495.3],
+    2024:[238.93,280.91,447.52,311.22,291.78,497.88,257.88,294.89,529.73,252.96,310.15,547.15],
+    2025:[240.69,294.16,574.63,260.75,318.14,568.17,296.81,323.05,564.68,296.19,314.45,636.97],
+    2026:[255.7,347.79,633.03,350.32,639.54,0,0,0,0,0,0,0]
+  },
+  divYears:[2020,2021,2022,2023,2024,2025,2026],
+  fire:{monthlyExpense:200000,swr:0.04,portfolioReturn:0.08,inflation:0.06,currentAge:36,cagrAssumption:0.235,fireNumber:60000000,fireNumberOverride:0},
+  years:[2020,2021,2022,2023,2024,2025,2026]
+};}
+
+let D=(()=>{try{const s=localStorage.getItem(SK);if(s){const p=JSON.parse(s);if(!p.passiveByYear)p.passiveByYear={};return p;}}catch(e){}return defData();})();
+let isDark=!!localStorage.getItem('abnw_dark');
+let curPage='home',nwSeg='line',piSeg='bar',curDivYear=2026,curAssetYear=2026,curPiYear=2026;
+let _assetsModified=false,_passiveModified=false;
+const _ch={};
+
+// ── UTILS ──
+const fI=(v,c=true)=>{if(v==null||isNaN(v))return'—';const a=Math.abs(v);let s;if(c&&a>=10000000)s='₹'+(a/10000000).toFixed(2)+'Cr';else if(c&&a>=100000)s='₹'+(a/100000).toFixed(2)+'L';else if(c&&a>=1000)s='₹'+(a/1000).toFixed(1)+'K';else s='₹'+Math.round(a).toLocaleString('en-IN');return v<0?'('+s+')':s;};
+const fU=(v,d=0)=>{if(v==null||isNaN(v))return'—';const a=Math.abs(v);let s;if(a>=1000000)s='$'+(a/1000000).toFixed(2)+'M';else if(a>=1000)s='$'+a.toLocaleString('en-US',{maximumFractionDigits:d});else s='$'+a.toFixed(2);return v<0?'('+s+')':s;};
+const fP=(v,sign=true)=>{if(v==null||isNaN(v))return'—';return(sign&&v>0?'+':'')+(v*100).toFixed(1)+'%';};
+const tod=()=>new Date().toISOString().split('T')[0];
+const cagr=(e,s,y)=>y>0&&s>0?Math.pow(e/s,1/y)-1:null;
+const getUST=()=>D.usAssets.reduce((s,a)=>s+(a.current||0),0);
+const getINT=()=>D.inAssets.reduce((s,a)=>s+(a.current||0),0);
+const getNWINR=()=>getUST()*D.fxRate+getINT();
+const getNWUSD=()=>getNWINR()/D.fxRate;
+const getPassiveINR=()=>D.passiveIncome.reduce((s,p)=>s+(p.currency==='USD'?p.value*D.fxRate:p.value),0);
+const getFDINR=()=>D.passiveIncome.filter(p=>p.category==='FD'&&p.currency==='INR').reduce((s,p)=>s+p.value,0);
+const getDivUSD=()=>(D.dividends[D.currentYear]||[]).reduce((s,v)=>s+(v||0),0);
+// Get passive value for a source in a given year
+const getPiVal=(sourceId,year)=>{const by=D.passiveByYear||{};return by[year]?.(sourceId)??null;};
+
+const PAL_L=['#7c3aed','#2563eb','#16a34a','#d97706','#dc2626','#0891b2','#db2777','#ea580c','#059669','#a16207','#1d4ed8','#7e22ce'];
+const PAL_D=['#a78bfa','#60a5fa','#4ade80','#fbbf24','#f87171','#22d3ee','#f472b6','#fb923c','#34d399','#fcd34d','#818cf8','#c084fc'];
+const pal=()=>isDark?PAL_D:PAL_L;
+const gcol=()=>isDark?'rgba(255,255,255,.06)':'rgba(0,0,0,.06)';
+const gtick=()=>isDark?'#58566c':'#9d9bb5';
+const rc=(id,cfg)=>{if(_ch[id])_ch[id].destroy();const c=document.getElementById(id);if(!c)return;_ch[id]=new Chart(c,cfg);};
+function bOpts(sc={}){
+  const s={x:{ticks:{color:gtick(),font:{size:11,family:'Helvetica,Arial,sans-serif'}},grid:{color:gcol()}},y:{ticks:{color:gtick(),font:{size:11,family:'Helvetica,Arial,sans-serif'}},grid:{color:gcol()}}};
+  Object.entries(sc).forEach(([k,v])=>{if(!s[k])s[k]={ticks:{color:gtick()},grid:{color:gcol()}};if(v.cb)s[k].ticks={...s[k].ticks,callback:v.cb};if(v.pos)s[k].position=v.pos;if(v.noGrid)s[k].grid={display:false};});
+  return{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:s};
+}
+const legOpts=()=>({display:true,labels:{color:gtick(),font:{size:11,family:'Helvetica,Arial,sans-serif'},boxWidth:9,padding:10}});
+
+const CAT_COLS={Equity:'#7c3aed',Savings:'#2563eb',Credit:'#0891b2',Retirement:'#16a34a',Crypto:'#f59e0b',ULIP:'#db2777','FD/Debt':'#d97706',MF:'#22c55e',Other:'#6b7280'};
+const CAT_COLS_D={Equity:'#a78bfa',Savings:'#60a5fa',Credit:'#22d3ee',Retirement:'#4ade80',Crypto:'#fbbf24',ULIP:'#f472b6','FD/Debt':'#fbbf24',MF:'#86efac',Other:'#9ca3af'};
+const catCol=cat=>isDark?(CAT_COLS_D[cat]||'#9ca3af'):(CAT_COLS[cat]||'#6b7280');
+const assetBg=cat=>{const l={Equity:'#ede9fe',Savings:'#dbeafe',Credit:'#cffafe',Retirement:'#dcfce7',Crypto:'#fef9c3',ULIP:'#fce7f3','FD/Debt':'#fef3c7',MF:'#f0fdf4',Other:'#f3f4f6'};const d={Equity:'#2d1f5e',Savings:'#1e3058',Credit:'#0c3040',Retirement:'#14382a',Crypto:'#3d3010',ULIP:'#3d1535','FD/Debt':'#3d2c0a',MF:'#0f3020',Other:'#2a2a35'};return isDark?(d[cat]||'#2a2a35'):(l[cat]||'#f3f4f6');};
+
+// ── THEME ──
+function applyTheme(){
+  document.body.classList.toggle('dark',isDark);
+  const ic=document.getElementById('theme-ic');
+  if(ic){if(isDark)ic.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+    else ic.innerHTML='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';}
+  const tog=document.getElementById('tog-theme');if(tog)tog.className='tog'+(isDark?' on':'');
+}
+function toggleTheme(){isDark=!isDark;localStorage.setItem('abnw_dark',isDark?'1':'');applyTheme();renderAll();}
+
+// ── NAV ──
+function showPage(name,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p-'+name).classList.add('active');
+  document.querySelectorAll('.bni').forEach(b=>b.classList.remove('active'));
+  if(el)el.classList.add('active');
+  curPage=name;
+  if(name==='home')renderHome();
+  else if(name==='assets')renderAssets();
+  else if(name==='fire')renderFIRE();
+  else if(name==='income'){curIncomeTab='passive';setIncomeTab('passive');}
+  else if(name==='more')renderMore();
+}
+function setSeg(k,v,btn){
+  const seg=btn?.closest('.seg');if(seg)seg.querySelectorAll('.seg-b').forEach(b=>b.classList.toggle('active',b===btn));
+  if(k==='nw'){nwSeg=v;renderNWChart();}
+  else if(k==='pi'){piSeg=v;renderPiHistChart();}
+  else renderAll();
+}
+
+// ── SHEETS ──
+function openSheet(id){
+  document.getElementById('overlay').classList.add('open');
+  document.getElementById(id).classList.add('open');
+  if(id==='sh-fire'){const f=D.fire;document.getElementById('fire-exp-inp').value=f.monthlyExpense;document.getElementById('fire-num-inp').value=f.fireNumberOverride||0;document.getElementById('fire-swr-inp').value=(f.swr*100).toFixed(1);document.getElementById('fire-age-inp').value=f.currentAge;document.getElementById('fire-cagr-inp').value=(f.cagrAssumption*100).toFixed(1);document.getElementById('fire-inf-inp').value=(f.inflation*100).toFixed(1);}
+}
+function closeSheets(){document.getElementById('overlay').classList.remove('open');document.querySelectorAll('.sheet').forEach(s=>s.classList.remove('open'));}
+
+// ── TOAST ──
+let _tt;
+function toast(m,t=''){const el=document.getElementById('toast');el.textContent=m;el.className='toast '+(t?t+' ':'');requestAnimationFrame(()=>el.classList.add('show'));clearTimeout(_tt);_tt=setTimeout(()=>el.classList.remove('show'),2500);}
+
+// ── FX ──
+function onFx(){const v=parseFloat(document.getElementById('fx-rate').value)||92.6;D.fxRate=v;document.getElementById('fx-b').textContent='₹'+v.toFixed(2);const s=document.getElementById('fx-rate-s');if(s)s.value=v;renderAll();}
+function onFxS(v){D.fxRate=parseFloat(v)||92.6;document.getElementById('fx-rate').value=D.fxRate;document.getElementById('fx-b').textContent='₹'+D.fxRate.toFixed(2);renderAll();}
+
+// ── SAVE ──
+function saveAll(){try{localStorage.setItem(SK,JSON.stringify(D));}catch(e){toast('Save failed');}}
+function markAssetsDirty(){_assetsModified=true;const b=document.getElementById('assets-save-bar');if(b)b.classList.add('visible');}
+function markPassiveDirty(){_passiveModified=true;const b=document.getElementById('passive-save-bar');if(b)b.classList.add('visible');}
+function saveAllAssets(){
+  D.usAssets.forEach(a=>{const inp=document.getElementById('ua-val-'+a.id);if(inp){const v=parseFloat(inp.value)||0;if(v!==a.current){a.current=v;if(!a.hist)a.hist={};a.hist[D.currentYear]=v;}}});
+  D.inAssets.forEach(a=>{const inp=document.getElementById('ia-val-'+a.id);if(inp){const v=parseFloat(inp.value)||0;if(v!==a.current){a.current=v;if(!a.hist)a.hist={};a.hist[D.currentYear]=v;}}});
+  _assetsModified=false;const b=document.getElementById('assets-save-bar');if(b)b.classList.remove('visible');
+  saveAll();renderHome();toast('✓ Assets saved','s');
+}
+
+// ── HOME ──
+function renderHome(){
+  const nwINR=getNWINR(),nwUSD=getNWUSD();
+  const passINR=getPassiveINR(),divUSD=getDivUSD();
+  const F=D.fire,annExp=F.monthlyExpense*12;
+  const fireNum=F.fireNumberOverride>0?F.fireNumberOverride:Math.round(annExp/(F.swr||0.04));
+  const fp=Math.min(nwINR/fireNum,1),gap=Math.max(fireNum-nwINR,0);
+  document.getElementById('hnw-val').textContent=fI(nwINR);
+  document.getElementById('hnw-sub').textContent=fU(nwUSD)+' · ₹'+D.fxRate+'/USD';
+  document.getElementById('hnw-badges').innerHTML=`<div class="hbadge g">${fP(fp,false)} to FIRE ↗</div><div class="hbadge a">${gap>0?fI(gap)+' gap':'✅ FIRE!'}</div>`;
+  document.getElementById('hnw-fire').style.width=(fp*100).toFixed(1)+'%';
+  document.getElementById('hnw-fire-lbl').textContent=fP(fp,false)+' to FIRE (target '+fI(fireNum)+')';
+  document.getElementById('hnw-fire-val').textContent=fI(nwINR);
+  const usINR=getUST()*D.fxRate,inINR=getINT();
+  document.getElementById('st-us-usd').textContent=fU(getUST());document.getElementById('st-us-inr').textContent=fI(usINR);
+  document.getElementById('st-in-inr').textContent=fI(inINR);document.getElementById('st-in-usd').textContent=fU(inINR/D.fxRate);
+  document.getElementById('st-passive').textContent=fI(passINR);document.getElementById('st-passive-mo').textContent=fI(passINR/12)+'/mo';
+  document.getElementById('st-div').textContent=fU(divUSD,2);document.getElementById('st-div-inr').textContent=fI(divUSD*D.fxRate)+' in INR';
+  const nwStart=D.nwHistory[0]?.nwINR||1,yrs=D.nwHistory.length-1||1;
+  const cagrV=cagr(nwINR,nwStart,yrs);
+  const prev=D.nwHistory.length>=2?D.nwHistory[D.nwHistory.length-2]?.nwINR:null;
+  const yoy=prev?(nwINR-prev)/prev:null;
+  document.getElementById('st-cagr').textContent=cagrV!==null?fP(cagrV,false):'—';
+  const yoyEl=document.getElementById('st-yoy');yoyEl.textContent=yoy!==null?fP(yoy):'—';yoyEl.className='sc-val '+(yoy===null?'grn':yoy>=0?'grn':'red');
+  document.getElementById('last-upd').textContent='Updated '+new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+  renderNWChart();renderAllocDonut();
+}
+function renderNWChart(){
+  const hy=D.nwHistory.map(h=>h.year.toString());
+  const hINR=D.nwHistory.map(h=>+(h.nwINR/10000000).toFixed(2));
+  const hUSD=D.nwHistory.map(h=>+(h.nwUSD/1000).toFixed(1));
+  const p=pal();
+  if(nwSeg==='bar'){
+    rc('ch-nw',{type:'bar',data:{labels:hy,datasets:[{label:'₹Cr',data:hINR,backgroundColor:p[0]+'bb',yAxisID:'y',borderRadius:8,borderSkipped:false},{label:'$K',data:hUSD,backgroundColor:p[1]+'bb',yAxisID:'y2',borderRadius:8,borderSkipped:false}]},
+      options:{...bOpts({y:{cb:v=>v+'Cr'},y2:{cb:v=>v+'K',pos:'right',noGrid:true}}),plugins:{legend:legOpts()}}});
+  } else {
+    rc('ch-nw',{type:'line',data:{labels:hy,datasets:[
+      {label:'₹Cr',data:hINR,borderColor:p[0],backgroundColor:p[0]+'18',tension:.4,fill:true,yAxisID:'y',pointRadius:4,pointBackgroundColor:p[0],pointBorderColor:isDark?'#16151e':'#fff',pointBorderWidth:2},
+      {label:'$K',data:hUSD,borderColor:p[1],backgroundColor:'transparent',tension:.4,fill:false,yAxisID:'y2',borderDash:[5,3],pointRadius:3,pointBackgroundColor:p[1]},
+    ]},options:{...bOpts({y:{cb:v=>v+'Cr'},y2:{cb:v=>v+'K',pos:'right',noGrid:true}}),plugins:{legend:legOpts()}}});
+  }
+}
+function renderAllocDonut(){
+  const usEq=D.usAssets.filter(a=>a.category==='Equity').reduce((s,a)=>s+a.current*D.fxRate,0);
+  const usSav=D.usAssets.filter(a=>['Savings','Credit'].includes(a.category)).reduce((s,a)=>s+a.current*D.fxRate,0);
+  const usRet=D.usAssets.filter(a=>['Retirement','Crypto'].includes(a.category)).reduce((s,a)=>s+a.current*D.fxRate,0);
+  const inMF=D.inAssets.filter(a=>a.category==='MF').reduce((s,a)=>s+a.current,0);
+  const inSav=D.inAssets.filter(a=>a.category==='Savings').reduce((s,a)=>s+a.current,0);
+  const inFD=D.inAssets.filter(a=>a.category==='FD/Debt').reduce((s,a)=>s+a.current,0);
+  const inRet=D.inAssets.filter(a=>a.category==='Retirement').reduce((s,a)=>s+a.current,0);
+  const inULIP=D.inAssets.filter(a=>a.category==='ULIP').reduce((s,a)=>s+a.current,0);
+  const raw=[['US Equity',usEq],['US Savings',usSav],['US Ret/Crypto',usRet],['India MF',inMF],['India Savings',inSav],['India FD',inFD],['India Ret.',inRet],['India ULIP',inULIP]];
+  const entries=raw.filter(([,v])=>v>0);
+  const labels=entries.map(([l])=>l),data=entries.map(([,v])=>v);
+  const p=pal();const total=data.reduce((s,v)=>s+v,0)||1;
+  rc('ch-alloc',{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:p.slice(0,data.length),borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'72%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fI(c.raw)} (${(c.raw/total*100).toFixed(0)}%)`}}}}});
+  // 2-col legend — short names, pct + value
+  const leg=document.getElementById('alloc-legend');
+  leg.innerHTML=entries.map(([l,v],i)=>`<div class="al-item"><div class="al-dot" style="background:${p[i]}"></div><span class="al-lbl">${l}</span><span class="al-val">${(v/total*100).toFixed(0)}% ${fI(v)}</span></div>`).join('');
+}
+
+// ── ASSETS ──
+function renderAssets(){renderUSList();renderINList();renderUSDoughnut();renderINDoughnut();renderAssetYears();renderHistTable();}
+function renderUSList(){
+  const el=document.getElementById('us-list'),total=getUST()||1;
+  el.innerHTML=D.usAssets.sort((a,b)=>b.current-a.current).map(a=>{
+    const pct=(a.current/total*100).toFixed(0);
+    return`<div class="asset-row">
+      <div class="asset-ic" style="background:${assetBg(a.category)}">${a.name.split(' ')[0]}</div>
+      <div class="asset-info">
+        <div class="asset-name">${a.name.replace(/^\S+\s*/,'')}</div>
+        <div style="display:flex;gap:5px;align-items:center;margin-top:3px"><span class="tag b">${a.category}</span><span style="font-size:10px;color:var(--txt3)">${pct}%</span></div>
+        <div class="pb-wrap"><div class="pb-fill" style="width:${pct}%;background:${catCol(a.category)}"></div></div>
+      </div>
+      <div class="asset-val">
+        <input id="ua-val-${a.id}" type="number" value="${a.current}" style="width:80px;background:var(--surf2);border:1.5px solid var(--brd);border-radius:8px;padding:4px 6px;font-size:13px;font-weight:800;color:${catCol(a.category)};text-align:right;outline:none;font-family:Helvetica,Arial,sans-serif" oninput="markAssetsDirty()" onfocus="this.style.borderColor='var(--pur)'" onblur="this.style.borderColor='var(--brd)'">
+        <div class="asset-v2" id="ua-inr-${a.id}">${fI(a.current*D.fxRate)}</div>
+      </div>
+      <button class="asset-del" onclick="editUSAsset('${a.id}')">✎</button>
+      <button class="asset-del" onclick="delUS('${a.id}')">×</button>
+    </div>`;
+  }).join('')||'<div style="padding:20px;text-align:center;color:var(--txt3)">No US assets</div>';
+}
+function renderINList(){
+  const el=document.getElementById('in-list'),total=getINT()||1;
+  el.innerHTML=D.inAssets.sort((a,b)=>b.current-a.current).map(a=>{
+    const pct=(a.current/total*100).toFixed(0);
+    return`<div class="asset-row">
+      <div class="asset-ic" style="background:${assetBg(a.category)}">${a.name.split(' ')[0]}</div>
+      <div class="asset-info">
+        <div class="asset-name">${a.name.replace(/^\S+\s*/,'')}</div>
+        <div style="display:flex;gap:5px;align-items:center;margin-top:3px"><span class="tag a">${a.category}</span><span style="font-size:10px;color:var(--txt3)">${pct}%</span></div>
+        <div class="pb-wrap"><div class="pb-fill" style="width:${pct}%;background:${catCol(a.category)}"></div></div>
+      </div>
+      <div class="asset-val">
+        <input id="ia-val-${a.id}" type="number" value="${a.current}" style="width:86px;background:var(--surf2);border:1.5px solid var(--brd);border-radius:8px;padding:4px 6px;font-size:12px;font-weight:800;color:${catCol(a.category)};text-align:right;outline:none;font-family:Helvetica,Arial,sans-serif" oninput="markAssetsDirty()" onfocus="this.style.borderColor='var(--pur)'" onblur="this.style.borderColor='var(--brd)'">
+        <div class="asset-v2" id="ia-usd-${a.id}">${fU(a.current/D.fxRate)}</div>
+      </div>
+      <button class="asset-del" onclick="editINAsset('${a.id}')">✎</button>
+      <button class="asset-del" onclick="delIN('${a.id}')">×</button>
+    </div>`;
+  }).join('')||'<div style="padding:20px;text-align:center;color:var(--txt3)">No India assets</div>';
+}
+function renderUSDoughnut(){
+  const cats={};D.usAssets.forEach(a=>{if(a.current>0)cats[a.category]=(cats[a.category]||0)+a.current;});
+  const e=Object.entries(cats).sort((a,b)=>b[1]-a[1]);
+  rc('ch-us-cat',{type:'doughnut',data:{labels:e.map(x=>x[0]),datasets:[{data:e.map(x=>x[1]),backgroundColor:e.map(x=>catCol(x[0])),borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:true,labels:{color:gtick(),font:{size:11,family:'Helvetica,Arial,sans-serif'},boxWidth:9,padding:8}},tooltip:{callbacks:{label:c=>` ${fU(c.raw)}`}}}}});
+}
+function renderINDoughnut(){
+  const cats={};D.inAssets.forEach(a=>{if(a.current>0)cats[a.category]=(cats[a.category]||0)+a.current;});
+  const e=Object.entries(cats).sort((a,b)=>b[1]-a[1]);
+  rc('ch-in-cat',{type:'doughnut',data:{labels:e.map(x=>x[0]),datasets:[{data:e.map(x=>x[1]),backgroundColor:e.map(x=>catCol(x[0])),borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:true,labels:{color:gtick(),font:{size:11,family:'Helvetica,Arial,sans-serif'},boxWidth:9,padding:8}},tooltip:{callbacks:{label:c=>` ${fI(c.raw)}`}}}}});
+}
+function renderAssetYears(){
+  const el=document.getElementById('asset-yr-row');
+  el.innerHTML=D.years.map(y=>`<div class="yr-chip ${y===curAssetYear?'active':''}" onclick="setAssetYear(${y})">${y}</div>`).join('');
+}
+function setAssetYear(y){curAssetYear=y;renderAssetYears();renderHistTable();}
+function renderHistTable(){
+  const yr=curAssetYear,rows=[];
+  D.usAssets.forEach(a=>{const v=a.hist?a.hist[yr]||0:0;if(v>0)rows.push({name:a.name,cat:a.category,val:fU(v),raw:v*D.fxRate,flag:'US'});});
+  D.inAssets.forEach(a=>{const v=a.hist?a.hist[yr]||0:0;if(v>0)rows.push({name:a.name,cat:a.category,val:fI(v),raw:v,flag:'IN'});});
+  rows.sort((a,b)=>b.raw-a.raw);
+  document.getElementById('asset-hist-body').innerHTML=rows.map(r=>`<tr><td style="font-size:12px">${r.name}</td><td><span class="tag ${r.flag==='US'?'b':'a'}">${r.cat}</span></td><td style="text-align:right;font-size:12px;font-weight:800;color:var(--pur)">${r.val}</td></tr>`).join('')||`<tr><td colspan="3" style="text-align:center;color:var(--txt3);padding:16px">No data for ${yr}</td></tr>`;
+}
+
+// ── ASSET CRUD ──
+function saveUSAsset(){
+  const nm=document.getElementById('us-nm').value.trim(),cat=document.getElementById('us-cat').value,val=parseFloat(document.getElementById('us-val').value)||0;
+  if(!nm){toast('Enter a name');return;}
+  const id=document.getElementById('sh-us-id').value;
+  if(id){const a=D.usAssets.find(x=>x.id===id);if(a){a.name=nm;a.category=cat;a.current=val;if(!a.hist)a.hist={};a.hist[D.currentYear]=val;}}
+  else{const hist={};D.years.forEach(y=>hist[y]=0);hist[D.currentYear]=val;D.usAssets.push({id:'us'+Date.now(),name:nm,category:cat,hist,current:val});}
+  saveAll();closeSheets();renderAssets();toast('✓ Saved','s');
+}
+function editUSAsset(id){
+  const a=D.usAssets.find(x=>x.id===id);if(!a)return;
+  document.getElementById('sh-us-title').textContent='Edit US Asset';document.getElementById('sh-us-id').value=id;
+  document.getElementById('us-nm').value=a.name;document.getElementById('us-cat').value=a.category;document.getElementById('us-val').value=a.current;
+  openSheet('sh-us');
+}
+function delUS(id){if(!confirm('Remove?'))return;D.usAssets=D.usAssets.filter(a=>a.id!==id);saveAll();renderAssets();}
+function saveINAsset(){
+  const nm=document.getElementById('in-nm').value.trim(),cat=document.getElementById('in-cat').value,val=parseFloat(document.getElementById('in-val').value)||0;
+  if(!nm){toast('Enter a name');return;}
+  const id=document.getElementById('sh-in-id').value;
+  if(id){const a=D.inAssets.find(x=>x.id===id);if(a){a.name=nm;a.category=cat;a.current=val;if(!a.hist)a.hist={};a.hist[D.currentYear]=val;}}
+  else{const hist={};D.years.forEach(y=>hist[y]=0);hist[D.currentYear]=val;D.inAssets.push({id:'in'+Date.now(),name:nm,category:cat,hist,current:val});}
+  saveAll();closeSheets();renderAssets();toast('✓ Saved','s');
+}
+function editINAsset(id){
+  const a=D.inAssets.find(x=>x.id===id);if(!a)return;
+  document.getElementById('sh-in-title').textContent='Edit India Asset';document.getElementById('sh-in-id').value=id;
+  document.getElementById('in-nm').value=a.name;document.getElementById('in-cat').value=a.category;document.getElementById('in-val').value=a.current;
+  openSheet('sh-in');
+}
+function delIN(id){if(!confirm('Remove?'))return;D.inAssets=D.inAssets.filter(a=>a.id!==id);saveAll();renderAssets();}
+
+// ── FIRE ──
+function renderFIRE(){
+  const nwINR=getNWINR(),F=D.fire,annExp=F.monthlyExpense*12;
+  const fireNum=F.fireNumberOverride>0?F.fireNumberOverride:Math.round(annExp/(F.swr||0.04));
+  const fp=Math.min(nwINR/fireNum,1),gap=Math.max(fireNum-nwINR,0),cagrV=F.cagrAssumption||0.235;
+  let eta='—';if(gap>0&&cagrV>0){let nw=nwINR,y=0;while(nw<fireNum&&y<50){nw*=(1+cagrV);y++;}eta=y+'y';}else if(gap<=0)eta='NOW! 🎉';
+  document.getElementById('fire-pct').textContent=fP(fp,false);
+  document.getElementById('fire-sub').textContent=gap>0?fI(gap)+' to go':'🎉 FIRE Ready!';
+  document.getElementById('fire-bar').style.width=(fp*100).toFixed(1)+'%';
+  document.getElementById('fire-bar-lbl').textContent='Target: '+fI(fireNum);
+  document.getElementById('fire-bar-val').textContent=fI(nwINR);
+  document.getElementById('fire-num').textContent=fI(fireNum);
+  document.getElementById('fire-nw').textContent=fI(nwINR);
+  document.getElementById('fire-gap').textContent=gap>0?fI(gap):'✅ Done';
+  document.getElementById('fire-gap').className='sc-val '+(gap>0?'red':'grn');
+  document.getElementById('fire-eta').textContent=eta;
+  document.getElementById('fire-exp').textContent=fI(F.monthlyExpense)+'/mo';
+  document.getElementById('fire-swr').textContent=(F.swr*100).toFixed(1)+'%';
+  const p=pal();const years=[],vals=[],tgt=[];let nw=nwINR;const cy=new Date().getFullYear();
+  for(let i=0;i<=15;i++){years.push(cy+i);vals.push(+(nw/10000000).toFixed(2));tgt.push(+(fireNum/10000000).toFixed(2));nw*=(1+cagrV);}
+  rc('ch-fire-proj',{type:'line',data:{labels:years.map(String),datasets:[
+    {label:'Portfolio',data:vals,borderColor:p[0],backgroundColor:p[0]+'15',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:p[0]},
+    {label:'FIRE Target',data:tgt,borderColor:p[2],borderDash:[6,3],borderWidth:2,pointRadius:0,fill:false,tension:0},
+  ]},options:{...bOpts({y:{cb:v=>v+'Cr'}}),plugins:{legend:legOpts()}}});
+  const passINR=getPassiveINR(),divINR=getDivUSD()*D.fxRate,fdINR=getFDINR();
+  rc('ch-fire-passive',{type:'bar',data:{labels:['Monthly Exp','Passive/mo','Dividends/mo','FD Int/mo'],datasets:[{data:[F.monthlyExpense,passINR/12,divINR/12,fdINR/12],backgroundColor:[p[4]+'cc',p[2]+'cc',p[5]+'cc',p[3]+'cc'],borderRadius:10,borderSkipped:false}]},
+    options:{...bOpts({y:{cb:v=>'₹'+Math.round(v/1000)+'K'}}),plugins:{legend:{display:false}}}});
+}
+function saveFireSettings(){
+  D.fire.monthlyExpense=parseFloat(document.getElementById('fire-exp-inp').value)||200000;
+  D.fire.fireNumberOverride=parseFloat(document.getElementById('fire-num-inp').value)||0;
+  D.fire.swr=(parseFloat(document.getElementById('fire-swr-inp').value)||4)/100;
+  D.fire.currentAge=parseInt(document.getElementById('fire-age-inp').value)||36;
+  D.fire.cagrAssumption=(parseFloat(document.getElementById('fire-cagr-inp').value)||23.5)/100;
+  D.fire.inflation=(parseFloat(document.getElementById('fire-inf-inp').value)||6)/100;
+  saveAll();closeSheets();renderFIRE();toast('✓ Saved','s');
+}
+
+// ── INCOME PAGE ──
+let curIncomeTab='passive';
+function setIncomeTab(tab){
+  curIncomeTab=tab;
+  document.querySelectorAll('.stab').forEach(b=>b.classList.remove('active'));document.getElementById('stab-'+tab).classList.add('active');
+  document.querySelectorAll('.stab-pane').forEach(p=>p.classList.remove('active'));document.getElementById('sp-'+tab).classList.add('active');
+  const hdr=document.getElementById('income-hdr-btns');
+  if(tab==='passive'){hdr.innerHTML=`<button class="btn sm primary" onclick="openAddPassiveSheet()">+ Source</button>`;renderPassiveTab();}
+  else{hdr.innerHTML=`<button class="btn xs" onclick="addDivYear()">+ Year</button><button class="btn xs primary" onclick="saveDividends()">💾 Save</button>`;renderDividendsTab();}
+}
+
+// ── PASSIVE TAB ──
+function renderPassiveTab(){
+  const passINR=getPassiveINR(),divUSD=getDivUSD(),fdINR=getFDINR();
+  const otherINR=D.passiveIncome.filter(p=>['Interest','Other'].includes(p.category)).reduce((s,p)=>s+(p.currency==='USD'?p.value*D.fxRate:p.value),0);
+  document.getElementById('pi-annual').textContent=fI(passINR);
+  document.getElementById('pi-monthly').textContent=fI(passINR/12)+'/mo';
+  document.getElementById('pi-div').textContent=fU(divUSD,2);
+  document.getElementById('pi-div-inr').textContent=fI(divUSD*D.fxRate)+' INR';
+  document.getElementById('pi-fd').textContent=fI(fdINR);
+  document.getElementById('pi-other').textContent=fI(otherINR);
+  renderPiHistChart();
+  renderPiDonut();
+  renderPiYrChips();
+  renderPiYrTable();
+  renderPiHistLog();
+}
+function renderPiHistChart(){
+  const p=pal();const ph=D.passiveHist;const type=piSeg;
+  rc('ch-passive',{type,data:{labels:ph.map(r=>r.year.toString()),datasets:[
+    {label:'FD (₹)',data:ph.map(r=>r.fdINR),backgroundColor:p[3]+'bb',borderColor:p[3],fill:false,tension:.4,pointRadius:3,borderRadius:6,stack:type==='bar'?'s':undefined},
+    {label:'Dividends (₹)',data:ph.map(r=>+(r.divUSD*D.fxRate).toFixed(0)),backgroundColor:p[5]+'bb',borderColor:p[5],fill:false,tension:.4,pointRadius:3,borderRadius:6,stack:type==='bar'?'s':undefined},
+    {label:'Other (₹)',data:ph.map(r=>r.otherINR),backgroundColor:p[2]+'bb',borderColor:p[2],fill:false,tension:.4,pointRadius:3,borderRadius:6,stack:type==='bar'?'s':undefined},
+  ]},options:{...bOpts({y:{cb:v=>fI(v)}}),plugins:{legend:legOpts()}}});
+}
+function renderPiDonut(){
+  const p=pal();
+  const vals=D.passiveIncome.map(pi=>pi.currency==='USD'?pi.value*D.fxRate:pi.value);
+  const labels=D.passiveIncome.map(pi=>pi.name.replace(/^\S+\s*/,'').slice(0,14));
+  const total=vals.reduce((s,v)=>s+v,0)||1;
+  rc('ch-pi-donut',{type:'doughnut',data:{labels,datasets:[{data:vals,backgroundColor:p.slice(0,vals.length),borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fI(c.raw)} (${(c.raw/total*100).toFixed(0)}%)`}}}}});
+  const leg=document.getElementById('pi-donut-legend');
+  leg.innerHTML=D.passiveIncome.map((pi,i)=>{const v=pi.currency==='USD'?pi.value*D.fxRate:pi.value;
+    return`<div class="al-item"><div class="al-dot" style="background:${p[i]}"></div><span class="al-lbl">${pi.name.replace(/^\S+\s*/,'').slice(0,14)}</span><span class="al-val">${fI(v)}</span></div>`;}).join('');
+}
+function renderPiYrChips(){
+  const el=document.getElementById('pi-yr-chips');if(!el)return;
+  const allYrs=[...new Set([...D.years,...Object.keys(D.passiveByYear||{}).map(Number)])].sort((a,b)=>a-b);
+  el.innerHTML=allYrs.map(y=>`<div class="yr-chip ${y===curPiYear?'active':''}" onclick="setPiYear(${y})">${y}</div>`).join('');
+}
+function setPiYear(y){curPiYear=y;renderPiYrChips();renderPiYrTable();}
+function renderPiYrTable(){
+  const yr=curPiYear;if(!D.passiveByYear)D.passiveByYear={};if(!D.passiveByYear[yr])D.passiveByYear[yr]={};
+  const tbody=document.getElementById('pi-yr-body'),tfoot=document.getElementById('pi-yr-foot');if(!tbody)return;
+  let tot=0;
+  tbody.innerHTML=D.passiveIncome.map((pi,i)=>{
+    const storedVal=D.passiveByYear[yr]?.[pi.id];
+    const displayVal=storedVal!=null?storedVal:pi.value;
+    const inr=pi.currency==='USD'?displayVal*D.fxRate:displayVal;
+    tot+=inr;
+    const catTag=pi.category==='Dividend'?'t':pi.category==='FD'?'a':'g';
+    return`<tr>
+      <td style="font-size:12px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${pi.name}</td>
+      <td><span class="tag ${catTag}">${pi.category}</span></td>
+      <td style="text-align:right">
+        <input class="cell-inp ${pi.currency==='USD'?'tel':'amb'}" type="number" id="piv-${yr}-${pi.id}" value="${displayVal.toFixed(2)}" step="1" min="0"
+          oninput="liveUpdatePiTotal('${yr}')" onchange="markPassiveDirty()">
+      </td>
+      <td style="text-align:right;font-size:11px;color:var(--grn)" id="pimo-${yr}-${pi.id}">${fI(inr/12)}</td>
+      <td style="text-align:right;font-size:10px;color:var(--txt3)">${pi.currency}</td>
+    </tr>`;
+  }).join('');
+  tfoot.innerHTML=`<tr class="tr-row"><td colspan="2">TOTAL / YR</td><td style="text-align:right;font-size:12px" id="pitot-${yr}">${fI(tot)}</td><td style="text-align:right;font-size:11px;color:var(--grn)">${fI(tot/12)}</td><td></td></tr>`;
+}
+function liveUpdatePiTotal(yr){
+  let tot=0;
+  D.passiveIncome.forEach(pi=>{
+    const inp=document.getElementById(`piv-${yr}-${pi.id}`);
+    const v=parseFloat(inp?.value)||0;
+    const inr=pi.currency==='USD'?v*D.fxRate:v;
+    tot+=inr;
+    const moEl=document.getElementById(`pimo-${yr}-${pi.id}`);if(moEl)moEl.textContent=fI(inr/12);
+  });
+  const totEl=document.getElementById(`pitot-${yr}`);if(totEl)totEl.textContent=fI(tot);
+}
+function savePassiveIncome(){
+  const yr=curPiYear;if(!D.passiveByYear)D.passiveByYear={};if(!D.passiveByYear[yr])D.passiveByYear[yr]={};
+  // Save per-year values
+  D.passiveIncome.forEach(pi=>{const inp=document.getElementById(`piv-${yr}-${pi.id}`);if(inp)D.passiveByYear[yr][pi.id]=parseFloat(inp.value)||0;});
+  // If saving current year, also update passiveIncome.value (used for live calcs)
+  if(yr===D.currentYear){D.passiveIncome.forEach(pi=>{const v=D.passiveByYear[yr]?.[pi.id];if(v!=null)pi.value=v;});}
+  // Update passiveHist
+  let fdINR=0,divUSD=0,otherINR=0;
+  D.passiveIncome.forEach(pi=>{const v=D.passiveByYear[yr]?.[pi.id]??pi.value;const inr=pi.currency==='USD'?v*D.fxRate:v;if(pi.category==='FD')fdINR+=inr;else if(pi.category==='Dividend')divUSD+=(pi.currency==='USD'?v:v/D.fxRate);else otherINR+=inr;});
+  const ph=D.passiveHist.find(r=>r.year===yr);if(ph){ph.fdINR=fdINR;ph.divUSD=divUSD;ph.otherINR=otherINR;}else D.passiveHist.push({year:yr,fdINR,divUSD,otherINR});
+  D.passiveHist.sort((a,b)=>a.year-b.year);
+  _passiveModified=false;const b=document.getElementById('passive-save-bar');if(b)b.classList.remove('visible');
+  saveAll();renderPassiveTab();toast('✓ Passive saved for '+yr,'s');
+}
+function addPassiveYear(){
+  const allYrs=[...new Set([...D.years,...Object.keys(D.passiveByYear||{}).map(Number)])].sort((a,b)=>a-b);
+  const next=(allYrs[allYrs.length-1]||D.currentYear)+1;
+  if(!D.passiveByYear)D.passiveByYear={};
+  if(!D.passiveByYear[next])D.passiveByYear[next]={};
+  if(!D.years.includes(next)){D.years.push(next);D.years.sort((a,b)=>a-b);}
+  D.passiveHist.push({year:next,fdINR:0,divUSD:0,otherINR:0});
+  D.passiveHist.sort((a,b)=>a.year-b.year);
+  curPiYear=next;saveAll();renderPiYrChips();renderPiYrTable();toast('Year '+next+' added','s');
+}
+function renderPiHistLog(){
+  const tbody=document.getElementById('pi-hist-body');if(!tbody)return;
+  tbody.innerHTML=D.passiveHist.slice().reverse().map(r=>{
+    const tot=r.fdINR+r.divUSD*D.fxRate+r.otherINR;
+    return`<tr><td>${r.year}</td><td style="text-align:right;font-size:11px;color:var(--amb)">${r.fdINR>0?fI(r.fdINR):'—'}</td><td style="text-align:right;font-size:11px;color:var(--tel)">${r.divUSD>0?fU(r.divUSD,2):'—'}</td><td style="text-align:right;font-size:11px;color:var(--blu)">${r.otherINR>0?fI(r.otherINR):'—'}</td><td style="text-align:right;font-size:12px;font-weight:800;color:var(--grn)">${fI(tot)}</td></tr>`;
+  }).join('');
+}
+function openAddPassiveSheet(){
+  document.getElementById('sh-passive-title').textContent='Add Passive Source';
+  document.getElementById('sh-pi-id').value='';
+  document.getElementById('pi-nm').value='';document.getElementById('pi-cat').value='Dividend';document.getElementById('pi-cur').value='INR';document.getElementById('pi-val-sh').value='';
+  openSheet('sh-passive');
+}
+function savePassiveSheet(){
+  const nm=document.getElementById('pi-nm').value.trim(),cat=document.getElementById('pi-cat').value,val=parseFloat(document.getElementById('pi-val-sh').value)||0,cur=document.getElementById('pi-cur').value;
+  if(!nm){toast('Enter a name');return;}
+  const id=document.getElementById('sh-pi-id').value;
+  if(id){const pi=D.passiveIncome.find(p=>p.id===id);if(pi){pi.name=nm;pi.category=cat;pi.value=val;pi.currency=cur;}}
+  else D.passiveIncome.push({id:'p'+Date.now(),name:nm,category:cat,value:val,currency:cur});
+  saveAll();closeSheets();renderPassiveTab();toast('✓ Saved','s');
+}
+function delPassive(id){if(!confirm('Remove?'))return;D.passiveIncome=D.passiveIncome.filter(p=>p.id!==id);saveAll();renderPassiveTab();}
+
+// ── DIVIDENDS TAB ──
+function renderDividendsTab(){
+  const yrs=D.divYears.sort((a,b)=>a-b);
+  const totals=yrs.map(y=>(D.dividends[y]||[]).reduce((s,v)=>s+(v||0),0));
+  const allTime=totals.reduce((s,v)=>s+v,0);
+  const curIdx=yrs.indexOf(curDivYear);const curTotal=curIdx>=0?totals[curIdx]:0;
+  const activeMo=(D.dividends[curDivYear]||[]).filter(v=>v>0).length||1;
+  const bestIdx=totals.indexOf(Math.max(...totals));
+  document.getElementById('dv-yr-total').textContent=fU(curTotal,2);
+  document.getElementById('dv-yr-inr').textContent=fI(curTotal*D.fxRate);
+  document.getElementById('dv-mo-avg').textContent=fU(curTotal/activeMo,2);
+  document.getElementById('dv-mo-sub').textContent=activeMo+' active months';
+  document.getElementById('dv-alltime').textContent=fU(allTime,2);
+  document.getElementById('dv-best').textContent=fU(totals[bestIdx]||0,2);
+  document.getElementById('dv-best-yr').textContent=yrs[bestIdx]||'—';
+  renderDivYrChips();renderDivMonthGrid();renderDivYrChart();renderDivMoChart();renderDivProjChart();renderDivHistTable();
+}
+function renderDivYrChips(){
+  const el=document.getElementById('div-yr-chips');if(!el)return;
+  el.innerHTML=D.divYears.slice().sort((a,b)=>b-a).map(y=>`<div class="yr-chip ${y===curDivYear?'active':''}" onclick="setDivYear(${y})">${y}</div>`).join('');
+}
+function setDivYear(y){curDivYear=y;renderDividendsTab();}
+function renderDivMonthGrid(){
+  document.getElementById('div-entry-title').textContent=curDivYear+' — Monthly Entry';
+  document.getElementById('div-mo-chart-title').textContent=curDivYear+' Monthly Breakdown';
+  const data=D.dividends[curDivYear]||Array(12).fill(0);
+  document.getElementById('div-mo-grid').innerHTML=MS.map((m,i)=>`<div class="dmc">
+    <div class="dmc-label">${m}</div>
+    <input class="dmc-inp" type="number" inputmode="decimal" step="0.01" min="0" id="dmi-${curDivYear}-${i}" value="${(data[i]||0).toFixed(2)}" oninput="updateDivLive()">
+  </div>`).join('');
+  updateDivLive();
+}
+function updateDivLive(){
+  const vals=Array.from({length:12},(_,i)=>parseFloat(document.getElementById(`dmi-${curDivYear}-${i}`)?.value)||0);
+  const tot=vals.reduce((s,v)=>s+v,0);
+  const tt=document.getElementById('div-mo-total');if(tt)tt.textContent=fU(tot,2);
+  const ti=document.getElementById('div-mo-inr');if(ti)ti.textContent=fI(tot*D.fxRate);
+}
+function saveDividends(){
+  const yr=curDivYear;
+  D.dividends[yr]=Array.from({length:12},(_,i)=>parseFloat(document.getElementById(`dmi-${yr}-${i}`)?.value)||0);
+  const total=D.dividends[yr].reduce((s,v)=>s+v,0);
+  const nwRow=D.nwHistory.find(h=>h.year===yr);if(nwRow)nwRow.dividends=total;
+  const ph=D.passiveHist.find(r=>r.year===yr);if(ph)ph.divUSD=total;
+  saveAll();renderDividendsTab();toast('✓ Dividends saved for '+yr,'s');
+}
+function addDivYear(){
+  const next=Math.max(...D.divYears)+1;
+  if(!D.divYears.includes(next)){
+    D.divYears.push(next);D.dividends[next]=Array(12).fill(0);
+    if(!D.years.includes(next)){D.years.push(next);D.years.sort((a,b)=>a-b);}
+    if(!D.passiveHist.find(r=>r.year===next))D.passiveHist.push({year:next,fdINR:0,divUSD:0,otherINR:0});
+    D.passiveHist.sort((a,b)=>a.year-b.year);
+    saveAll();curDivYear=next;renderDividendsTab();toast('Year '+next+' added','s');
+  }
+}
+function renderDivYrChart(){
+  const p=pal();const yrs=D.divYears.sort((a,b)=>a-b);
+  const totals=yrs.map(y=>(D.dividends[y]||[]).reduce((s,v)=>s+(v||0),0));
+  rc('ch-div-yr',{type:'bar',data:{labels:yrs.map(String),datasets:[{data:totals,backgroundColor:yrs.map(y=>y===curDivYear?p[5]:p[5]+'44'),borderColor:yrs.map(y=>y===curDivYear?p[5]:'transparent'),borderWidth:2,borderRadius:10,borderSkipped:false}]},
+    options:{...bOpts({y:{cb:v=>'$'+v.toFixed(0)}}),plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.raw.toFixed(2)} = ${fI(c.raw*D.fxRate)}`}}}}});
+}
+function renderDivMoChart(){
+  const p=pal();const data=D.dividends[curDivYear]||Array(12).fill(0);
+  rc('ch-div-mo',{type:'bar',data:{labels:MS,datasets:[{data,backgroundColor:data.map(v=>v>0?p[5]+'bb':p[5]+'22'),borderRadius:8,borderSkipped:false}]},
+    options:{...bOpts({y:{cb:v=>'$'+v.toFixed(0)}}),plugins:{legend:{display:false}}}});
+}
+function renderDivProjChart(){
+  const p=pal();const pyrs=[],pd=[],pdinr=[];let dv=getDivUSD();
+  for(let i=0;i<=10;i++){pyrs.push(D.currentYear+i);pd.push(+dv.toFixed(2));pdinr.push(+(dv*D.fxRate/1000).toFixed(1));dv*=1.10;}
+  rc('ch-div-proj',{type:'bar',data:{labels:pyrs.map(String),datasets:[
+    {type:'bar',label:'Dividends ($)',data:pd,backgroundColor:p[5]+'bb',yAxisID:'y',borderRadius:6},
+    {type:'line',label:'In INR (₹K)',data:pdinr,borderColor:p[0],borderWidth:2.5,tension:.4,pointRadius:3,yAxisID:'y2',fill:false},
+  ]},options:{...bOpts({y:{cb:v=>'$'+v},y2:{cb:v=>v+'K',pos:'right',noGrid:true}}),plugins:{legend:legOpts()}}});
+}
+function renderDivHistTable(){
+  const yrs=D.divYears.sort((a,b)=>a-b);
+  document.getElementById('div-hist-head').innerHTML=`<tr><th>Mo</th>${yrs.map(y=>`<th>${y}</th>`).join('')}<th>Avg</th></tr>`;
+  const rows=MS.map((m,i)=>{
+    const vals=yrs.map(y=>(D.dividends[y]||[])[i]||0);
+    const active=vals.filter(v=>v>0);const avg=active.length?active.reduce((s,v)=>s+v,0)/active.length:0;
+    return`<tr><td>${m}</td>${vals.map(v=>`<td class="${v>0?'pos':''}">${v>0?'$'+v.toFixed(2):'—'}</td>`).join('')}<td class="${avg>0?'pos':''}">${avg>0?'$'+avg.toFixed(2):'—'}</td></tr>`;
+  });
+  const totals=yrs.map(y=>(D.dividends[y]||[]).reduce((s,v)=>s+(v||0),0));
+  rows.push(`<tr class="tr-row"><td>Tot</td>${totals.map(t=>`<td>$${t.toFixed(0)}</td>`).join('')}<td>—</td></tr>`);
+  document.getElementById('div-hist-body').innerHTML=rows.join('');
+}
+
+// ── MORE ──
+function renderMore(){
+  document.getElementById('log-date').value=tod();
+  document.getElementById('log-year').value=D.currentYear;
+  renderLogTable();
+}
+function renderLogTable(){
+  const sorted=[...D.nwHistory].sort((a,b)=>b.year-a.year);
+  document.getElementById('log-body').innerHTML=sorted.map((h,i,arr)=>{
+    const prev=arr[i+1];const yoy=prev?(h.nwINR-prev.nwINR)/prev.nwINR:null;
+    return`<tr>
+      <td>${h.year}</td>
+      <td style="text-align:right;font-size:11px;font-weight:700;color:var(--pur)">${fI(h.nwINR)}</td>
+      <td style="text-align:right;font-size:11px;font-weight:700;color:var(--blu)">${fU(h.nwUSD)}</td>
+      <td class="${yoy===null?'':yoy>=0?'pos':'neg'}" style="text-align:right;font-size:11px">${yoy!==null?fP(yoy):'—'}</td>
+      <td><button style="background:none;border:none;cursor:pointer;color:var(--red);font-size:14px" onclick="delSnapshot(${h.year})">×</button></td>
+    </tr>`;
+  }).join('');
+}
+function saveSnapshot(){
+  const year=parseInt(document.getElementById('log-year').value)||D.currentYear;
+  const nwINR=getNWINR(),nwUSD=getNWUSD();
+  const existing=D.nwHistory.find(h=>h.year===year);
+  if(existing){existing.nwINR=nwINR;existing.nwUSD=nwUSD;}
+  else D.nwHistory.push({year,nwINR,nwUSD,dividends:getDivUSD(),passive:getPassiveINR()});
+  D.nwHistory.sort((a,b)=>a.year-b.year);
+  if(!D.years.includes(year)){D.years.push(year);D.years.sort((a,b)=>a-b);}
+  saveAll();renderLogTable();toast('✓ Snapshot saved','s');
+}
+function delSnapshot(year){if(!confirm('Remove '+year+' snapshot?'))return;D.nwHistory=D.nwHistory.filter(h=>h.year!==year);saveAll();renderLogTable();}
+
+// ── SAVE/EXPORT/IMPORT ──
+function saveAll(){try{localStorage.setItem(SK,JSON.stringify(D));scheduleAutoSave();}catch(e){toast('Save failed');}}
+function exportJSON(){
+  const b=new Blob([JSON.stringify(D,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='AbhinavNW_'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);toast('✓ Exported — save to Google Drive/iCloud','s');
+}
+function importJSON(ev){
+  const f=ev.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=e=>{try{const imp=JSON.parse(e.target.result);if(!imp.nwHistory||!imp.usAssets)throw new Error('Invalid');if(!imp.passiveByYear)imp.passiveByYear={};D=imp;saveAll();renderAll();toast('✅ Imported!','s');}catch(err){toast('Import failed: '+err.message);}ev.target.value='';};
+  r.readAsText(f);
+}
+// Auto-save (File System API — Chrome/Edge)
+let _fh=null,_ast=null;
+async function enableAutoSave(){
+  try{if(!window.showOpenFilePicker){toast('Needs Chrome/Edge for auto-save');return;}
+    const[h]=await window.showOpenFilePicker({types:[{description:'JSON',accept:{'application/json':['.json']}}],multiple:false});
+    _fh=h;if((await h.requestPermission({mode:'readwrite'}))!=='granted'){_fh=null;return;}
+    toast('✓ Auto-save ON','s');
+  }catch(e){if(e.name!=='AbortError')toast('Auto-save: '+(e.message||e));}
+}
+async function writeAuto(){if(!_fh)return;try{const w=await _fh.createWritable();await w.write(JSON.stringify(D,null,2));await w.close();}catch(e){_fh=null;}}
+function scheduleAutoSave(){if(!_fh)return;clearTimeout(_ast);_ast=setTimeout(writeAuto,900);}
+
+// ── RENDER ALL ──
+function renderAll(){
+  if(curPage==='home')renderHome();
+  else if(curPage==='assets')renderAssets();
+  else if(curPage==='fire')renderFIRE();
+  else if(curPage==='income'){if(curIncomeTab==='passive')renderPassiveTab();else renderDividendsTab();}
+  else if(curPage==='more')renderMore();
+}
+
+// ── INIT ──
+(function init(){
+  applyTheme();
+  document.getElementById('fx-rate').value=D.fxRate;
+  document.getElementById('fx-b').textContent='₹'+D.fxRate.toFixed(2);
+  const frs=document.getElementById('fx-rate-s');if(frs)frs.value=D.fxRate;
+  document.getElementById('log-date').value=tod();
+  renderHome();
+})();
+</script>
+</body>
+</html>
