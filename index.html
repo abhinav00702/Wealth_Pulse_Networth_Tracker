@@ -47,7 +47,7 @@ input,select,button,textarea{font-family:Helvetica,Arial,sans-serif}
 .page.active{display:block;animation:fu .25s ease}
 @keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── FLOATING GLASS NAV ── */
+/* ── FLOATING GLASS NAV — iOS 26 liquid glass ── */
 #bnav{
   position:fixed;
   bottom:calc(env(safe-area-inset-bottom,0px) + 14px);
@@ -57,41 +57,71 @@ input,select,button,textarea{font-family:Helvetica,Arial,sans-serif}
   display:flex;align-items:center;
   border-radius:26px;
   z-index:200;padding:0 6px;
-  background:linear-gradient(135deg,rgba(3,26,32,0.72) 0%,rgba(4,32,40,0.78) 50%,rgba(5,37,46,0.72) 100%);
-  border:1px solid rgba(34,211,238,.14);
-  backdrop-filter:blur(28px) saturate(180%);
-  -webkit-backdrop-filter:blur(28px) saturate(180%);
-  box-shadow:0 8px 32px rgba(8,145,178,.18),0 2px 8px rgba(0,0,0,.25),inset 0 1px 0 rgba(34,211,238,.1),inset 0 -1px 0 rgba(0,0,0,.15);
+  /* Dark mode: near-transparent dark tint — content bleeds through */
+  background:rgba(10,10,18,0.10);
+  border:1px solid rgba(255,255,255,0.05);
+  backdrop-filter:blur(40px) saturate(200%) brightness(1.08);
+  -webkit-backdrop-filter:blur(40px) saturate(200%) brightness(1.08);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,.22),
+    0 1px 0 rgba(255,255,255,.07) inset,
+    0 -1px 0 rgba(0,0,0,.18) inset;
 }
+/* glass sheen — top highlight */
 #bnav::before{
   content:'';position:absolute;inset:0;border-radius:26px;
-  background:linear-gradient(135deg,rgba(34,211,238,.08) 0%,transparent 45%,rgba(8,145,178,.05) 100%);
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.045) 0%,
+    rgba(255,255,255,0.01) 40%,
+    transparent 100%
+  );
   pointer-events:none;
 }
+/* subtle specular rim */
+#bnav::after{
+  content:'';position:absolute;inset:0;border-radius:26px;
+  border:1px solid rgba(255,255,255,0.06);
+  pointer-events:none;
+}
+/* Light mode: frosted white glass — very transparent */
 body:not(.dark) #bnav{
-  background:linear-gradient(135deg,rgba(255,255,255,0.82) 0%,rgba(252,251,255,0.88) 50%,rgba(248,250,255,0.82) 100%);
-  border:1px solid rgba(255,255,255,0.9);
-  box-shadow:0 8px 32px rgba(0,0,0,.1),0 2px 12px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,1),inset 0 -1px 0 rgba(0,0,0,.04);
+  background:rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.20);
+  backdrop-filter:blur(40px) saturate(180%) brightness(1.04);
+  -webkit-backdrop-filter:blur(40px) saturate(180%) brightness(1.04);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,.08),
+    0 1px 0 rgba(255,255,255,.9) inset,
+    0 -1px 0 rgba(0,0,0,.04) inset;
 }
 body:not(.dark) #bnav::before{
-  background:linear-gradient(135deg,rgba(255,255,255,0.6) 0%,transparent 60%);
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08) 0%,
+    rgba(255,255,255,0.02) 50%,
+    transparent 100%
+  );
 }
-body:not(.dark) .bni{color:rgba(90,88,112,.65)}
+body:not(.dark) #bnav::after{
+  border:1px solid rgba(255,255,255,0.7);
+}
+body:not(.dark) .bni{color:rgba(60,58,90,.6)}
 .bni{
   flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
   cursor:pointer;border:none;background:transparent;
-  color:rgba(255,255,255,.38);
+  color:rgba(255,255,255,.52);
   font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:700;
   height:50px;border-radius:20px;padding:0;
   transition:color .2s,background .2s,transform .15s;
   user-select:none;position:relative;z-index:1;
   text-transform:uppercase;letter-spacing:.3px;
 }
-body:not(.dark) .bni{color:rgba(90,88,112,.65)}
+body:not(.dark) .bni{color:rgba(60,58,90,.6)}
 .bni:active{transform:scale(.92)}
 .bni svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
-.bni.active{color:var(--pur);background:rgba(124,58,237,.18)}
-body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.1)}
+.bni.active{color:var(--pur);background:rgba(124,58,237,.15);backdrop-filter:blur(8px)}
+body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.08)}
 .bni.active svg{stroke:var(--pur);transform:translateY(-1px)}
 
 /* HEADER */
