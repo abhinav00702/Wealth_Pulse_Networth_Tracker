@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Abhinav · Net Worth</title>
+<title>Abhinav · WealthPulse</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -57,25 +57,26 @@ input,select,button,textarea{font-family:Helvetica,Arial,sans-serif}
   display:flex;align-items:center;
   border-radius:26px;
   z-index:200;padding:0 6px;
-  background:linear-gradient(135deg,rgba(26,22,50,.85) 0%,rgba(18,16,40,.9) 50%,rgba(14,20,44,.85) 100%);
-  border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(135deg,rgba(3,26,32,0.72) 0%,rgba(4,32,40,0.78) 50%,rgba(5,37,46,0.72) 100%);
+  border:1px solid rgba(34,211,238,.14);
   backdrop-filter:blur(28px) saturate(180%);
   -webkit-backdrop-filter:blur(28px) saturate(180%);
-  box-shadow:0 8px 32px rgba(0,0,0,.45),0 2px 8px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.08),inset 0 -1px 0 rgba(0,0,0,.2);
+  box-shadow:0 8px 32px rgba(8,145,178,.18),0 2px 8px rgba(0,0,0,.25),inset 0 1px 0 rgba(34,211,238,.1),inset 0 -1px 0 rgba(0,0,0,.15);
 }
 #bnav::before{
   content:'';position:absolute;inset:0;border-radius:26px;
-  background:linear-gradient(135deg,rgba(124,58,237,.13) 0%,transparent 45%,rgba(0,212,160,.07) 100%);
+  background:linear-gradient(135deg,rgba(34,211,238,.08) 0%,transparent 45%,rgba(8,145,178,.05) 100%);
   pointer-events:none;
 }
 body:not(.dark) #bnav{
-  background:linear-gradient(135deg,rgba(255,255,255,.75) 0%,rgba(248,246,255,.85) 50%,rgba(242,246,255,.75) 100%);
-  border:1px solid rgba(124,58,237,.16);
-  box-shadow:0 8px 32px rgba(124,58,237,.12),0 2px 12px rgba(0,0,0,.07),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(124,58,237,.05);
+  background:linear-gradient(135deg,rgba(3,26,32,0.68) 0%,rgba(4,37,48,0.74) 50%,rgba(5,46,56,0.68) 100%);
+  border:1px solid rgba(34,211,238,.18);
+  box-shadow:0 8px 32px rgba(8,145,178,.22),0 2px 12px rgba(0,0,0,.18),inset 0 1px 0 rgba(34,211,238,.12),inset 0 -1px 0 rgba(0,0,0,.1);
 }
 body:not(.dark) #bnav::before{
-  background:linear-gradient(135deg,rgba(124,58,237,.07) 0%,transparent 50%,rgba(34,197,94,.04) 100%);
+  background:linear-gradient(135deg,rgba(34,211,238,.1) 0%,transparent 45%,rgba(8,145,178,.06) 100%);
 }
+body:not(.dark) .bni{color:rgba(255,255,255,.45)}
 .bni{
   flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
   cursor:pointer;border:none;background:transparent;
@@ -90,7 +91,7 @@ body:not(.dark) .bni{color:rgba(90,88,112,.65)}
 .bni:active{transform:scale(.92)}
 .bni svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
 .bni.active{color:var(--pur);background:rgba(124,58,237,.18)}
-body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.1)}
+body:not(.dark) .bni.active{color:var(--tel);background:rgba(34,211,238,.18)}
 .bni.active svg{stroke:var(--pur);transform:translateY(-1px)}
 
 /* HEADER */
@@ -157,13 +158,13 @@ body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.1)}
 }
 .dark .hero.h-total::before{background:radial-gradient(circle,rgba(34,211,238,.38),transparent 70%)}
 
-/* Hero: FIRE — ember orange */
+/* Hero: FIRE — unified teal (matches other cards in dark mode) */
 .dark .fire-hero{
-  background:linear-gradient(145deg,#1f0a04 0%,#2d1208 40%,#1a0e1a 100%);
-  border:1px solid rgba(234,88,12,.3);
-  box-shadow:0 8px 32px rgba(200,60,10,.35),inset 0 1px 0 rgba(255,255,255,.09);
+  background:linear-gradient(145deg,#031a20 0%,#042028 45%,#05252e 100%);
+  border:1px solid rgba(34,211,238,.22);
+  box-shadow:0 8px 36px rgba(8,145,178,.35),inset 0 1px 0 rgba(255,255,255,.1);
 }
-.dark .fire-hero::before{background:radial-gradient(circle,rgba(251,146,60,.35),transparent 70%)}
+.dark .fire-hero::before{background:radial-gradient(circle,rgba(34,211,238,.38),transparent 70%)}
 
 /* Stat cards — dark mode: all unified teal base (matching Dividends/yr card) with unique accent orbs */
 /* Shared teal base for ALL stat cards in dark mode */
@@ -192,8 +193,8 @@ body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.1)}
 .dark #card-us-breakdown{background:linear-gradient(145deg,#0d1628,#111e38);border-color:rgba(59,130,246,.22)}
 .dark #card-in-breakdown{background:linear-gradient(145deg,#180c30,#1f1040);border-color:rgba(139,92,246,.22)}
 .dark #p-assets .card:not(#card-us-breakdown):not(#card-in-breakdown){background:linear-gradient(145deg,#041a12,#072418);border-color:rgba(52,211,153,.2)}
-.dark #p-fire .card:nth-child(1){background:linear-gradient(145deg,#1a0a04,#231006);border-color:rgba(251,146,60,.22)}
-.dark #p-fire .card:nth-child(2){background:linear-gradient(145deg,#1e0e04,#2a1606);border-color:rgba(251,191,36,.2)}
+.dark #p-fire .card:nth-child(1){background:linear-gradient(145deg,#031a20,#05242c);border-color:rgba(34,211,238,.2)}
+.dark #p-fire .card:nth-child(2){background:linear-gradient(145deg,#0e0d22,#141230);border-color:rgba(99,102,241,.18)}
 .dark #sp-passive .card:nth-child(1){background:linear-gradient(145deg,#031a20,#05242c);border-color:rgba(34,211,238,.2)}
 .dark #sp-passive .card:nth-child(2){background:linear-gradient(145deg,#041a12,#072418);border-color:rgba(34,197,94,.2)}
 .dark #sp-passive .card:nth-child(3),.dark #sp-passive .card:nth-child(4),.dark #sp-passive .card:nth-child(5){background:linear-gradient(145deg,#0e0d22,#141230);border-color:rgba(99,102,241,.18)}
@@ -205,6 +206,11 @@ body:not(.dark) .bni.active{color:var(--pur);background:rgba(124,58,237,.1)}
 .dark #p-more .card:nth-child(1),.dark #p-more .card:nth-child(2){background:linear-gradient(145deg,#0e0d22,#141230);border-color:rgba(99,102,241,.18)}
 .dark #p-more .card:nth-child(3){background:linear-gradient(145deg,#031a20,#05242c);border-color:rgba(34,211,238,.18)}
 .dark #p-more .card:nth-child(4){background:linear-gradient(145deg,#041a12,#072418);border-color:rgba(34,197,94,.18)}
+.dark #sp-salary .card:nth-child(1){background:linear-gradient(145deg,#031a20,#05242c);border-color:rgba(34,211,238,.2)}
+.dark #sp-salary .card:nth-child(2){background:linear-gradient(145deg,#180c30,#1f1040);border-color:rgba(139,92,246,.2)}
+.dark #sp-salary .card:nth-child(3){background:linear-gradient(145deg,#0d1628,#111e38);border-color:rgba(59,130,246,.2)}
+.dark #sp-salary .card:nth-child(4){background:linear-gradient(145deg,#041a12,#072418);border-color:rgba(34,197,94,.2)}
+.dark #sp-salary .card:nth-child(5){background:linear-gradient(145deg,#0e0d22,#141230);border-color:rgba(99,102,241,.18)}
 
 /* Dark mode text */
 .dark .card-ttl{color:rgba(255,255,255,.9)}
@@ -600,7 +606,7 @@ body:not(.dark) .card [style*="border-top:1px solid var(--brd)"]{border-top-colo
   <div class="ph">
     <div>
       <div style="font-size:10px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.6px" id="last-upd">—</div>
-      <div class="ph-title">Net Worth</div>
+      <div class="ph-title">WealthPulse</div>
     </div>
     <div class="hrow">
       <div class="fx-pill">
@@ -714,6 +720,7 @@ body:not(.dark) .card [style*="border-top:1px solid var(--brd)"]{border-top-colo
   <div class="stab-row">
     <button class="stab active" id="stab-passive" onclick="setIncomeTab('passive')">💰 Passive</button>
     <button class="stab" id="stab-dividends" onclick="setIncomeTab('dividends')">📈 Dividends</button>
+    <button class="stab" id="stab-salary" onclick="setIncomeTab('salary')">💵 Salary</button>
   </div>
 
   <!-- PASSIVE PANE -->
@@ -819,9 +826,62 @@ body:not(.dark) .card [style*="border-top:1px solid var(--brd)"]{border-top-colo
       </div>
     </div>
   </div>
-</div>
 
-<!-- MORE -->
+  <!-- SALARY PANE -->
+  <div class="stab-pane" id="sp-salary">
+    <div class="save-bar" id="salary-save-bar" style="margin:0 0 8px">
+      <span>Unsaved changes</span>
+      <button class="save-bar-btn" onclick="saveSalaryAll()">💾 Save</button>
+    </div>
+    <div class="stat-grid" id="sal-kpi-grid"></div>
+
+    <div class="slbl">💵 Abhinav · Total Compensation</div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="ovx"><table class="py-tbl">
+        <thead><tr><th>Component</th><th style="text-align:right">Amount ($)</th><th style="text-align:right">INR (₹)</th><th style="text-align:right">%</th></tr></thead>
+        <tbody id="abh-comp-body"></tbody>
+      </table></div>
+      <div style="padding:10px 16px"><button class="btn sm primary" onclick="saveSalary('abh')">💾 Save Abhinav</button></div>
+    </div>
+
+    <div class="slbl">💜 Wife · Total Compensation</div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="ovx"><table class="py-tbl">
+        <thead><tr><th>Component</th><th style="text-align:right">Amount ($)</th><th style="text-align:right">INR (₹)</th><th style="text-align:right">%</th></tr></thead>
+        <tbody id="wife-comp-body"></tbody>
+      </table></div>
+      <div style="padding:10px 16px"><button class="btn sm primary" onclick="saveSalary('wife')">💾 Save Wife</button></div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr"><div class="card-ttl">📊 Compensation Chart</div></div>
+      <div class="cw cw-200"><canvas id="ch-salary" role="img" aria-label="Salary breakdown chart"></canvas></div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-ttl">⏱ Rate Calculator</div>
+        <div style="display:flex;gap:6px;align-items:center;font-size:10px;color:var(--txt3)">
+          <span>Hrs/day</span><input type="number" id="sal-hpd" value="8" min="1" max="24" style="width:36px;padding:3px 5px;border-radius:7px;border:1px solid var(--brd);background:var(--surf2);color:var(--txt);font-size:11px;font-weight:700;text-align:center;outline:none" oninput="recalcSalary()">
+          <span>Days/wk</span><input type="number" id="sal-dpw" value="5" min="1" max="7" style="width:36px;padding:3px 5px;border-radius:7px;border:1px solid var(--brd);background:var(--surf2);color:var(--txt);font-size:11px;font-weight:700;text-align:center;outline:none" oninput="recalcSalary()">
+          <span>Wks/yr</span><input type="number" id="sal-wpy" value="50" min="1" max="52" style="width:38px;padding:3px 5px;border-radius:7px;border:1px solid var(--brd);background:var(--surf2);color:var(--txt);font-size:11px;font-weight:700;text-align:center;outline:none" oninput="recalcSalary()">
+        </div>
+      </div>
+      <div class="ovx"><table class="py-tbl">
+        <thead><tr><th>Period</th><th style="text-align:right">Abh Base</th><th style="text-align:right">Abh Total</th><th style="text-align:right">Wife</th><th style="text-align:right">Combined</th></tr></thead>
+        <tbody id="sal-rate-body"></tbody>
+      </table></div>
+    </div>
+
+    <div class="slbl">📋 Salary History</div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="ovx"><table class="py-tbl">
+        <thead><tr><th>Date</th><th style="text-align:right">Abh Base ($)</th><th style="text-align:right">Abh Total ($)</th><th style="text-align:right">Wife ($)</th><th style="text-align:right">Combined ($)</th><th style="text-align:right">Combined (₹)</th></tr></thead>
+        <tbody id="sal-log-body"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
 <div class="page" id="p-more">
   <div class="ph"><div class="ph-title">More</div></div>
   <div class="slbl">Sync & Backup</div>
@@ -860,7 +920,7 @@ body:not(.dark) .card [style*="border-top:1px solid var(--brd)"]{border-top-colo
       <tbody id="log-body"></tbody>
     </table></div>
   </div>
-  <div style="padding:20px;text-align:center;color:var(--txt3);font-size:11px">Abhinav · Net Worth v3 · localStorage + JSON sync</div>
+  <div style="padding:20px;text-align:center;color:var(--txt3);font-size:11px">Abhinav · WealthPulse v4 · localStorage + JSON sync</div>
 </div>
 
 </div><!-- pages -->
@@ -1018,10 +1078,16 @@ function defData(){return{
   },
   divYears:[2020,2021,2022,2023,2024,2025,2026],
   fire:{monthlyExpense:200000,swr:0.04,portfolioReturn:0.08,inflation:0.06,currentAge:36,cagrAssumption:0.235,fireNumber:60000000,fireNumberOverride:0},
+  salary:{
+    hoursDay:8,daysWeek:5,weeksYear:50,
+    abhinav:{base:163770,bonus:16377,rsu:53750,health:0,pto:0,travel:0,k401:0},
+    wife:{base:49980,bonus:0,rsu:0,health:0,pto:0,travel:0,k401:0}
+  },
+  salLog:[],
   years:[2020,2021,2022,2023,2024,2025,2026]
 };}
 
-let D=(()=>{try{const s=localStorage.getItem(SK);if(s){const p=JSON.parse(s);if(!p.passiveByYear)p.passiveByYear={};return p;}}catch(e){}return defData();})();
+let D=(()=>{try{const s=localStorage.getItem(SK);if(s){const p=JSON.parse(s);if(!p.passiveByYear)p.passiveByYear={};if(!p.salary)p.salary={hoursDay:8,daysWeek:5,weeksYear:50,abhinav:{base:163770,bonus:16377,rsu:53750,health:0,pto:0,travel:0,k401:0},wife:{base:49980,bonus:0,rsu:0,health:0,pto:0,travel:0,k401:0}};if(!p.salLog)p.salLog=[];return p;}}catch(e){}return defData();})();
 let isDark=!!localStorage.getItem('abnw_dark');
 let curPage='home',nwSeg='line',piSeg='bar',curDivYear=2026,curAssetYear=2026,curPiYear=2026;
 let _assetsModified=false,_passiveModified=false;
@@ -1325,6 +1391,7 @@ function setIncomeTab(tab){
   document.querySelectorAll('.stab-pane').forEach(p=>p.classList.remove('active'));document.getElementById('sp-'+tab).classList.add('active');
   const hdr=document.getElementById('income-hdr-btns');
   if(tab==='passive'){hdr.innerHTML=`<button class="btn sm primary" onclick="openAddPassiveSheet()">+ Source</button>`;renderPassiveTab();}
+  else if(tab==='salary'){hdr.innerHTML=`<button class="btn sm primary" onclick="saveSalaryAll()">💾 Save</button>`;renderSalaryTab();}
   else{hdr.innerHTML=`<button class="btn xs" onclick="addDivYear()">+ Year</button><button class="btn xs primary" onclick="saveDividends()">💾 Save</button>`;renderDividendsTab();}
 }
 
@@ -1538,6 +1605,134 @@ function renderDivHistTable(){
   document.getElementById('div-hist-body').innerHTML=rows.join('');
 }
 
+// ── SALARY TAB ──
+function renderSalaryTab(){
+  if(!D.salary)D.salary={hoursDay:8,daysWeek:5,weeksYear:50,abhinav:{base:163770,bonus:16377,rsu:53750,health:0,pto:0,travel:0,k401:0},wife:{base:49980,bonus:0,rsu:0,health:0,pto:0,travel:0,k401:0}};
+  if(!D.salLog)D.salLog=[];
+  const S=D.salary,A=S.abhinav,W=S.wife,fx=D.fxRate;
+  const aT=A.base+A.bonus+A.rsu+A.health+A.pto+A.travel+A.k401;
+  const wT=W.base+W.bonus+W.rsu+W.health+W.pto+W.travel+W.k401;
+  const comb=aT+wT;
+  // KPI stat cards
+  const kpiEl=document.getElementById('sal-kpi-grid');
+  if(kpiEl)kpiEl.innerHTML=`
+    <div class="stat-card sc-blu"><div class="sc-lbl">💵 Abhinav Total</div><div class="sc-val blu">${fU(aT)}</div><div class="sc-sub">${fI(aT*fx)}</div></div>
+    <div class="stat-card sc-pnk"><div class="sc-lbl">💜 Wife Total</div><div class="sc-val pur">${fU(wT)}</div><div class="sc-sub">${fI(wT*fx)}</div></div>
+    <div class="stat-card sc-grn"><div class="sc-lbl">🏠 Combined/yr</div><div class="sc-val grn">${fU(comb)}</div><div class="sc-sub">${fI(comb*fx)}</div></div>
+    <div class="stat-card sc-amb"><div class="sc-lbl">📅 Combined/mo</div><div class="sc-val amb">${fU(comb/12)}</div><div class="sc-sub">${fI(comb/12*fx)}/mo</div></div>`;
+  // Component rows helper
+  const comps=[
+    ['Base Salary','base','💼'],['Annual Bonus','bonus','🎯'],
+    ['RSU / Stock','rsu','📈'],['Health Benefits','health','🏥'],
+    ['PTO Value','pto','🏖'],['Travel Allowance','travel','✈'],
+    ['401(k) Match','k401','🏦']
+  ];
+  function compRow(who,comp,lbl,icon,total){
+    const val=total>0?who[comp]:0;
+    const pct=total>0?(val/total*100).toFixed(0)+'%':'—';
+    return`<tr>
+      <td>${icon} ${lbl}</td>
+      <td style="text-align:right"><input type="number" value="${who[comp]}" class="cell-inp tel" style="width:82px" oninput="updateSalComp('${who===A?'abh':'wife'}','${comp}',this.value)" onkeydown="if(event.key==='Enter')saveSalaryAll()"></td>
+      <td style="text-align:right;font-size:11px;color:var(--txt2)">${fI((who[comp]||0)*fx)}</td>
+      <td style="text-align:right;font-size:11px;color:var(--txt3)">${pct}</td>
+    </tr>`;
+  }
+  document.getElementById('abh-comp-body').innerHTML=comps.map(([lbl,k,icon])=>compRow(A,k,lbl,icon,aT)).join('')+
+    `<tr style="font-weight:800;background:var(--surf2)"><td>TOTAL COMP</td><td style="text-align:right;color:var(--blu)">${fU(aT)}</td><td style="text-align:right;font-size:11px">${fI(aT*fx)}</td><td style="text-align:right">100%</td></tr>`;
+  document.getElementById('wife-comp-body').innerHTML=comps.map(([lbl,k,icon])=>compRow(W,k,lbl,icon,wT)).join('')+
+    `<tr style="font-weight:800;background:var(--surf2)"><td>TOTAL COMP</td><td style="text-align:right;color:var(--pur)">${fU(wT)}</td><td style="text-align:right;font-size:11px">${fI(wT*fx)}</td><td style="text-align:right">100%</td></tr>`;
+  // Rate calculator
+  if(document.getElementById('sal-hpd'))document.getElementById('sal-hpd').value=S.hoursDay||8;
+  if(document.getElementById('sal-dpw'))document.getElementById('sal-dpw').value=S.daysWeek||5;
+  if(document.getElementById('sal-wpy'))document.getElementById('sal-wpy').value=S.weeksYear||50;
+  recalcSalary();
+  // Salary history
+  renderSalLog();
+}
+function updateSalComp(who,key,val){
+  const v=parseFloat(val)||0;
+  if(who==='abh')D.salary.abhinav[key]=v;else D.salary.wife[key]=v;
+  // mark dirty
+  const sb=document.getElementById('salary-save-bar');if(sb)sb.classList.add('visible');
+  recalcSalary();
+  // refresh KPI
+  const S=D.salary,A=S.abhinav,W=S.wife,fx=D.fxRate;
+  const aT=A.base+A.bonus+A.rsu+A.health+A.pto+A.travel+A.k401;
+  const wT=W.base+W.bonus+W.rsu+W.health+W.pto+W.travel+W.k401;
+  const comb=aT+wT;
+  const kpiEl=document.getElementById('sal-kpi-grid');
+  if(kpiEl)kpiEl.innerHTML=`
+    <div class="stat-card sc-blu"><div class="sc-lbl">💵 Abhinav Total</div><div class="sc-val blu">${fU(aT)}</div><div class="sc-sub">${fI(aT*fx)}</div></div>
+    <div class="stat-card sc-pnk"><div class="sc-lbl">💜 Wife Total</div><div class="sc-val pur">${fU(wT)}</div><div class="sc-sub">${fI(wT*fx)}</div></div>
+    <div class="stat-card sc-grn"><div class="sc-lbl">🏠 Combined/yr</div><div class="sc-val grn">${fU(comb)}</div><div class="sc-sub">${fI(comb*fx)}</div></div>
+    <div class="stat-card sc-amb"><div class="sc-lbl">📅 Combined/mo</div><div class="sc-val amb">${fU(comb/12)}</div><div class="sc-sub">${fI(comb/12*fx)}/mo</div></div>`;
+}
+function recalcSalary(){
+  if(!D.salary)return;
+  const S=D.salary,A=S.abhinav,W=S.wife,fx=D.fxRate;
+  const hpd=parseFloat(document.getElementById('sal-hpd')?.value)||S.hoursDay||8;
+  const dpw=parseFloat(document.getElementById('sal-dpw')?.value)||S.daysWeek||5;
+  const wpy=parseFloat(document.getElementById('sal-wpy')?.value)||S.weeksYear||50;
+  S.hoursDay=hpd;S.daysWeek=dpw;S.weeksYear=wpy;
+  const hpy=hpd*dpw*wpy,dpy=dpw*wpy;
+  const aBase=A.base,aFull=A.base+A.bonus+A.rsu+A.health+A.pto+A.travel+A.k401;
+  const wFull=W.base+W.bonus+W.rsu+W.health+W.pto+W.travel+W.k401;
+  const comb=aFull+wFull;
+  const p=pal();
+  const rates=[['Hourly',aBase/hpy,aFull/hpy,wFull/hpy,comb/hpy],['Daily',aBase/dpy,aFull/dpy,wFull/dpy,comb/dpy],['Weekly',aBase/wpy,aFull/wpy,wFull/wpy,comb/wpy],['Monthly',aBase/12,aFull/12,wFull/12,comb/12],['Yearly',aBase,aFull,wFull,comb]];
+  const rb=document.getElementById('sal-rate-body');
+  if(rb)rb.innerHTML=rates.map(([l,ab,af,wb,cb])=>`<tr>
+    <td style="font-weight:700">${l}</td>
+    <td style="text-align:right;color:var(--blu);font-weight:700">${fU(ab,2)}</td>
+    <td style="text-align:right;color:var(--tel);font-weight:700">${fU(af,2)}</td>
+    <td style="text-align:right;color:var(--pur);font-weight:700">${fU(wb,2)}</td>
+    <td style="text-align:right;color:var(--grn);font-weight:800">${fU(cb,2)}</td>
+  </tr>`).join('');
+  // Chart
+  rc('ch-salary',{type:'bar',data:{labels:['Base','Bonus','RSU / Stock','Health','Other'],datasets:[
+    {label:'Abhinav ($)',data:[A.base,A.bonus,A.rsu,A.health,A.pto+A.travel+A.k401],backgroundColor:p[1]+'bb',borderRadius:6},
+    {label:'Wife ($)',data:[W.base,W.bonus,W.rsu,W.health,W.pto+W.travel+W.k401],backgroundColor:p[6]+'bb',borderRadius:6},
+  ]},options:{...bOpts({y:{cb:v=>fU(v)}}),plugins:{legend:legOpts()}}});
+}
+function saveSalary(who){
+  if(!D.salary)return;
+  saveAll();
+  const b=document.getElementById('salary-save-bar');if(b)b.classList.remove('visible');
+  toast('✓ '+(who==='abh'?'Abhinav':'Wife')+' salary saved','s');
+  logSalaryEntry();
+}
+function saveSalaryAll(){
+  if(!D.salary)return;
+  saveAll();
+  const b=document.getElementById('salary-save-bar');if(b)b.classList.remove('visible');
+  toast('✓ Salary saved','s');
+  logSalaryEntry();
+}
+function logSalaryEntry(){
+  if(!D.salary)return;
+  if(!D.salLog)D.salLog=[];
+  const A=D.salary.abhinav,W=D.salary.wife;
+  const aFull=A.base+A.bonus+A.rsu+A.health+A.pto+A.travel+A.k401;
+  const wFull=W.base+W.bonus+W.rsu+W.health+W.pto+W.travel+W.k401;
+  const last=D.salLog[0];
+  if(!last||last.abhTotal!==aFull||last.wifeTotal!==wFull){
+    D.salLog.unshift({date:tod(),year:D.currentYear,abhBase:A.base,abhTotal:aFull,wifeTotal:wFull,combined:aFull+wFull});
+    saveAll();renderSalLog();
+  }
+}
+function renderSalLog(){
+  const el=document.getElementById('sal-log-body');if(!el)return;
+  if(!D.salLog||!D.salLog.length){el.innerHTML='<tr><td colspan="6" style="text-align:center;color:var(--txt3);padding:16px">No salary history yet</td></tr>';return;}
+  el.innerHTML=D.salLog.map(r=>`<tr>
+    <td style="font-size:11px">${r.date||'—'}</td>
+    <td style="text-align:right;color:var(--blu);font-weight:700">${fU(r.abhBase||0)}</td>
+    <td style="text-align:right;color:var(--tel);font-weight:700">${fU(r.abhTotal||0)}</td>
+    <td style="text-align:right;color:var(--pur);font-weight:700">${fU(r.wifeTotal||0)}</td>
+    <td style="text-align:right;color:var(--grn);font-weight:800">${fU(r.combined||0)}</td>
+    <td style="text-align:right;font-size:11px;color:var(--txt2)">${fI((r.combined||0)*D.fxRate)}</td>
+  </tr>`).join('');
+}
+
 // ── MORE ──
 function renderMore(){
   document.getElementById('log-date').value=tod();
@@ -1578,7 +1773,7 @@ function exportJSON(){
 function importJSON(ev){
   const f=ev.target.files[0];if(!f)return;
   const r=new FileReader();
-  r.onload=e=>{try{const imp=JSON.parse(e.target.result);if(!imp.nwHistory||!imp.usAssets)throw new Error('Invalid');if(!imp.passiveByYear)imp.passiveByYear={};D=imp;saveAll();renderAll();toast('✅ Imported!','s');}catch(err){toast('Import failed: '+err.message);}ev.target.value='';};
+  r.onload=e=>{try{const imp=JSON.parse(e.target.result);if(!imp.nwHistory||!imp.usAssets)throw new Error('Invalid');if(!imp.passiveByYear)imp.passiveByYear={};if(!imp.salary)imp.salary={hoursDay:8,daysWeek:5,weeksYear:50,abhinav:{base:163770,bonus:16377,rsu:53750,health:0,pto:0,travel:0,k401:0},wife:{base:49980,bonus:0,rsu:0,health:0,pto:0,travel:0,k401:0}};if(!imp.salLog)imp.salLog=[];D=imp;saveAll();renderAll();toast('✅ Imported!','s');}catch(err){toast('Import failed: '+err.message);}ev.target.value='';};
   r.readAsText(f);
 }
 // Auto-save (File System API — Chrome/Edge)
@@ -1598,7 +1793,7 @@ function renderAll(){
   if(curPage==='home')renderHome();
   else if(curPage==='assets')renderAssets();
   else if(curPage==='fire')renderFIRE();
-  else if(curPage==='income'){if(curIncomeTab==='passive')renderPassiveTab();else renderDividendsTab();}
+  else if(curPage==='income'){if(curIncomeTab==='passive')renderPassiveTab();else if(curIncomeTab==='salary')renderSalaryTab();else renderDividendsTab();}
   else if(curPage==='more')renderMore();
 }
 
